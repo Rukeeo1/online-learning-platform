@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import { Header } from "./components/Header/header";
 import { HomePage } from "./components/Home/HomePage";
 import { CourseData } from "./components/Home/CourseData";
+import { Footer } from "./components/Footer/Footer";
 
 // import './App.css'
 
@@ -12,6 +13,7 @@ const App = () => {
     <div className="App">
       <Header />
       <HomePage courses={CourseData} />
+      <Footer />
     </div>
   );
 };
