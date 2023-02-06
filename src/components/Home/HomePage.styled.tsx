@@ -92,8 +92,8 @@ export const BillBoardBannerContainer = styled("div")({
 
 export const CarouselInner = styled("div")({
   display: "flex",
-  transition: 'ease 1s',
-})
+  transition: "ease 1s",
+});
 
 export const BillboardContentBox = styled("div")({
   fontWeight: 400,
@@ -206,7 +206,7 @@ export const CourseCardHeaderTitle = styled("h2")({
   letterSpacing: "0.5px",
 });
 
-export const CourseDiscoveryContent = styled("div")({
+export const ViewedCourseContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -220,7 +220,21 @@ export const CourseDiscoveryContent = styled("div")({
   width: "100%",
 });
 
-export const DiscoveryCourseParagraph = styled("div")({
+export const ViewedUnitCourseDetails = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  width: "100%",
+});
+
+export const ViewedCourseHeader = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -234,29 +248,29 @@ export const DiscoveryCourseParagraph = styled("div")({
   width: "100%",
 });
 
-export const CourseViewedTitle = styled("div")({
+export const CourseViewedTitle = styled("h2")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
-  fontFamily:
-    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  width: "100%",
   color: "#1c1d1f",
   margin: 0,
   padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.2px",
+  letterSpacing: "-.02rem",
   fontSize: "24px",
-  maxWidth: "800",
-  width: "100%",
+  maxWidth: "800px",
 });
 
 export const CourseViewAnchorTag = styled("a")({
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-0.2",
+  lineheight: 1.2,
+  letterSpacing: "-.02rem",
   fontSize: "24px",
   margin: 0,
   padding: 0,
@@ -265,11 +279,7 @@ export const CourseViewAnchorTag = styled("a")({
   cursor: "pointer",
 });
 
-export const Span = styled("div")({
-  display: "inline-block",
-});
-
-export const DiscoveryCourseCardContainer = styled("div")({
+export const CourseCarouselContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -283,15 +293,13 @@ export const DiscoveryCourseCardContainer = styled("div")({
   padding: 0,
   position: "relative",
   width: "100%",
-  // height: 290.52,
-  backgroundColor: "#f0f0ff",
 });
 
-export const DiscoveryCourseCardCarousel = styled("div")({
+export const CourseUnitGridCarousel = styled("div")({
   display: "grid",
   gridAutoFlow: "column",
   gridGap: "16px",
-  gridAutoColumns: "calc((100% - (5 - 1) * 1.6rem)/5)",
+  gridAutoColumns: "calc((100% - (5 - 1) * 16px)/5)",
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
@@ -299,7 +307,6 @@ export const DiscoveryCourseCardCarousel = styled("div")({
   fontSize: "16px",
   color: "#1c1d1f",
   width: "100%",
-  height: 290.52,
   margin: 0,
   padding: 0,
   overflow: "auto",
@@ -311,7 +318,7 @@ export const DiscoveryCourseCardCarousel = styled("div")({
   position: "relative",
 });
 
-export const DiscoveryCarouselBackButton = styled("button")({
+export const CourseCarouselBackButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -337,7 +344,7 @@ export const DiscoveryCarouselBackButton = styled("button")({
   zIndex: "1010",
 });
 
-export const DiscoveryCarouselForwardButton = styled("button")({
+export const CourseCarouselForwardButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -364,7 +371,7 @@ export const DiscoveryCarouselForwardButton = styled("button")({
   zIndex: 1,
 });
 
-export const ScrollItemCourseCardCarousel = styled("div")({
+export const CourseCarouselScrollItem = styled("div")({
   alignItems: "flex-start",
   display: "flex",
   justifyContent: "center",
@@ -377,6 +384,7 @@ export const ScrollItemCourseCardCarousel = styled("div")({
   margin: 0,
   padding: 0,
   minWidth: "1px",
+  height: 290.52,
   width: 245.59,
   scrollSnapAlign: "start",
 });
@@ -399,7 +407,7 @@ export const ScrollItemContainer = styled("div")({
   minWidth: "173px",
 });
 
-export const ImageContainer = styled("div")({
+export const CourseCardImageContainer = styled("div")({
   display: "flex",
   fontWeight: 400,
   lineHeight: 1.4,
@@ -411,12 +419,27 @@ export const ImageContainer = styled("div")({
   border: "1px solid #d1d7dc",
   overflow: "hidden",
   position: "relative",
-  width: 245.59,
   height: 138.14,
+  paddingBottom: "56.25%",
+  width: "100%",
 });
 
-export const AuthorCourseCardContainer = styled("div")({
+export const CourseCardImage = styled("img")({
+  color: "#1c1d1f",
+  aspectratio: "auto 240 / 135",
+  margin: 0,
+  padding: 0,
+  maxWidth: "100%",
+  display: "block",
+  transition: "opacity linear 100ms",
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+});
+
+export const CourseCardMainContent = styled("div")({
   display: "flex",
+  flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   fontFamily:
@@ -433,52 +456,47 @@ export const AuthorCourseCardContainer = styled("div")({
   width: "100%",
 });
 
-export const AuthorCourseDetails = styled("h3")({
+export const CourseTitleContainer = styled("h3")({
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
+  alignItems: "flex-start",
   justifyContent: "center",
   color: "#1c1d1f",
   margin: 0,
   padding: 0,
-  maxWidth: "600px",
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-.2px",
+  letterSpacing: "-0.02rem",
   fontSize: "16px",
-  whiteSpace: "normal",
+  whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
   marginBottom: "4px",
   marginTop: "8px",
-  width: "100%",
+  width: "245.59px",
+  maxWidth: "600px",
 });
 
-export const AuthorCourseAnchorTag = styled("a")({
+export const CourseTitleAnchorTag = styled("a")({
   display: "flex",
   alignItems: "baseline",
-  justifyContent: "flex-start",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   lineHeight: 1.2,
-  letterSpacing: "-.2px",
+  letterSpacing: "-0.02rem",
   fontSize: "16px",
   whiteSpace: "normal",
   margin: 0,
   padding: 0,
   color: "#1c1d1f",
   fontWeight: "inherit",
-  width: "100%",
+  textDecoration: "none",
 });
 
-export const AuthorCourseHeaderTitle = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  fontSize: "16px",
-  width: "100%",
-});
-
-export const AuthorTitleContainer = styled("div")({
+export const CourseInstructorContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -518,7 +536,58 @@ export const StarRatingContainer = styled("span")({
   padding: 0,
   display: "flex",
   alignItems: "center",
-  width: "100%",
+  // width: "100%",
+  width: 94.17,
+});
+
+export const CourseCardRateNum = styled("span")({
+  display: "flex",
+  whiteSpace: "nowrap",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-0.2px",
+  fontSize: "14px",
+  marginRight: "4px",
+  color: "#b4690e",
+});
+
+export const StarIconContent = styled("div")({
+  display: "flex",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  whiteSpace: "nowrap",
+  fill: "none",
+  margin: 0,
+  padding: 0,
+  width: "70px",
+  height: "16px",
+});
+
+export const RateIcon = styled("img")({
+  display: "block",
+  color: "#E5981A",
+  width: "14px",
+  height: "14px",
+});
+
+export const RateNumContent = styled("span")({
+  display: "flex",
+  alignItems: "center",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "12px",
+  color: "#6a6f73",
+  marginLeft: "4px",
 });
 
 export const PriceTextContainer = styled("div")({
@@ -580,7 +649,7 @@ export const OriginalPriceText = styled("span")({
   padding: 0,
 });
 
-export const AuthorCourseBadgeContainer = styled("div")({
+export const CourseBadgeContainer = styled("div")({
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
@@ -593,4 +662,18 @@ export const AuthorCourseBadgeContainer = styled("div")({
   margin: "8px 0 4px",
   gap: "4px 8px",
   width: "100%",
+});
+
+export const RecommendedCourseContainer = styled("div")({
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  marginTop: "48px",
+  width: "100%",
+  position: "relative",
 });

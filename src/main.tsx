@@ -56,7 +56,8 @@ const theme = createTheme({
 
     subtitle2: {
       fontSize: 16,
-      color: "#1c1d1f",
+      lineHeight: 1.2,
+      letterSpacing: "-.2px",
       fontWeight: 700,
       fontFamily:
         "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
