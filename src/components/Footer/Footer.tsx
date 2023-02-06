@@ -166,55 +166,145 @@ export const Footer: React.FunctionComponent<FooterProps> = (props) => {
           </LanguageSelector>
 
           <ListLinkColumn>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Udemy Business</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Teach on Udemy</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Get the app</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>About us</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Contact us</span>
             </ListLinkAnchorTag>
           </ListLinkColumn>
 
           <ListLinkColumn>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Careers</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Blog</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Help and Support</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Affiliate</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Investors</span>
             </ListLinkAnchorTag>
           </ListLinkColumn>
 
           <ListLinkColumn>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Terms</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Privacy policy</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Cookie settings</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Sitemap</span>
             </ListLinkAnchorTag>
-            <ListLinkAnchorTag>
+            <ListLinkAnchorTag
+              sx={{
+                ":hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
               <span>Accessibility statement</span>
             </ListLinkAnchorTag>
           </ListLinkColumn>
