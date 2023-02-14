@@ -5,7 +5,6 @@ import { Header } from "./components/Header/header";
 import { HomePage } from "./components/Home/HomePage";
 import { CourseData } from "./components/Home/CourseData";
 import { Footer } from "./components/Footer/Footer";
-import { CourseReview } from "./components/Home/CourseReview";
 
 // import './App.css'
 
@@ -13,9 +12,8 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      {/* <HomePage courses={CourseData} /> */}
-      <CourseReview />
-      {/* <Footer /> */}
+      <HomePage courses={CourseData} />
+      <Footer />
     </div>
   );
 };
