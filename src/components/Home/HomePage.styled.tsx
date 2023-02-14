@@ -677,3 +677,292 @@ export const RecommendedCourseContainer = styled("div")({
   width: "100%",
   position: "relative",
 });
+
+/* COURSE REVIEW */
+export const CourseReviewContainer = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  paddingTop: "16px",
+  paddingBottom: "16px",
+  width: 340,
+  border: "1px solid #d1d7dc",
+  zIndex: 1,
+  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  backgroundColor: "#fff",
+});
+
+export const AddToCartWrapper = styled("div")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  marginBottom: "8px",
+  marginTop: "16px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "8px",
+  width: 292,
+});
+
+export const AddToCartButton = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  flex: 1,
+});
+
+export const CartButton = styled("button")({
+  margin: 0,
+  backgroundImage: "none",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+  position: "relative",
+  alignItems: "center",
+  border: "none",
+  cursor: "pointer",
+  display: "inline-flex",
+  minWidth: "80px",
+  padding: "0 12px",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  height: "48px",
+  color: "#fff",
+  backgroundColor: "#a435f0",
+  width: "100%",
+});
+
+export const AddToWishList = styled("button")({
+  margin: 0,
+  backgroundImage: "none",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+  position: "relative",
+  alignItems: "center",
+  cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  height: "48px",
+  color: "#1c1d1f",
+  backgroundColor: "transparent",
+  border: "1px solid #1c1d1f",
+  minWidth: "auto",
+  padding: "0 12px",
+  width: "48px",
+  borderRadius: "50%",
+});
+
+export const CourseViewContent = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  margin: 0,
+  padding: 0,
+  color: "#1c1d1f",
+  whiteSpace: "nowrap",
+  flex: 1,
+  minWidth: "1px",
+  // width: "100%",
+  width: 292,
+});
+
+export const CourseReviewTitle = styled("h3")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-0.02rem",
+  fontSize: "20px",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  marginBottom: "4px",
+  marginTop: "8px",
+  width: "100%",
+  // maxWidth: "600px",
+});
+
+export const CourseReviewTitleAnchorTag = styled("a")({
+  display: "flex",
+  alignItems: "baseline",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  lineHeight: 1.2,
+  letterSpacing: "-0.02rem",
+  fontSize: "20px",
+  whiteSpace: "normal",
+  margin: 0,
+  padding: 0,
+  color: "#1c1d1f",
+  fontWeight: "inherit",
+  textDecoration: "none",
+});
+
+export const UpdatedCourseReview = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  letterSpacing: "-.02rem",
+  marginTop: 8,
+  marginBottom: 8,
+  color: "#1F6055",
+  width: "100%",
+  whiteSpace: "nowrap",
+  margin: 0,
+  padding: 0,
+  fontweight: 400,
+  lineHeight: 1.4,
+  fontSize: "12px",
+});
+
+export const Span = styled("span")({
+  fontWeight: 700,
+  marginLeft: "2px",
+});
+
+export const TotalHoursContainer = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  letterSpacing: "-.02rem",
+  marginTop: "8px",
+  color: "#7E8386",
+  width: "100%",
+  whiteSpace: "nowrap",
+  fontweight: 400,
+  fontSize: "12px",
+});
+
+export const TotalHoursContent = styled("div")({
+  fontweight: 400,
+  fontSize: "12px",
+});
+
+export const CourseReviewIncentives = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.2,
+  letterSpacing: "-0.02rem",
+  fontSize: "14px",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  marginBottom: "4px",
+  marginTop: "8px",
+  width: "100%",
+});
+
+export const IncentivesText = styled("div")({
+  display: "flex",
+  alignItems: "baseline",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  lineHeight: 1.2,
+  letterSpacing: "-0.02rem",
+  fontSize: "15px",
+  whiteSpace: "normal",
+  margin: 0,
+  padding: 0,
+  color: "#1c1d1f",
+  fontWeight: "inherit",
+  textDecoration: "none",
+});
+
+export const BlockListItem = styled("div")({
+  margin: 0,
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  display: "flex",
+  alignItems: "baseline",
+  justifyContent: "center",
+  width: "100%",
+  height: "auto",
+  textAlign: "left",
+  letterSpacing: "normal",
+  whiteSpace: "normal",
+  padding: "4px 0",
+  color: "#1c1d1f",
+});
+
+export const CheckMark = styled("img")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  textAlign: "left",
+   whiteSpace: "normal",
+  margin: 0,
+  padding: 0,
+  display: "flex",
+  flexShrink: 0,
+  width: "14px",
+  // height: "16px",
+  color: "#1c1d1f",
+});
+
+export const BlockListItemContent = styled("p")({
+  listStyle: "none",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  textAlign: "left",
+  letterSpacing: "normal",
+  whiteSpace: "normal",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  flex: 1,
+  minWidth: "1px",
+  width: "100%",
+  marginLeft: "16px",
+});

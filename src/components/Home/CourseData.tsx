@@ -8,7 +8,6 @@ import Mohan from "/src/assets/images/mohan.jpeg";
 import Chen from "/src/assets/images/chen.jpeg";
 import Wizard from "/src/assets/images/wizard-courses.jpeg";
 import Bakery from "/src/assets/images/skillbakery.jpeg";
-import Skup from "/src/assets/images/antoni.jpeg";
 import Stephen from "/src/assets/images/stephen.jpeg";
 import StephenUlib from "/src/assets/images/stephen-uli.jpeg";
 import Marek from "/src/assets/images/marek-g.jpeg";
