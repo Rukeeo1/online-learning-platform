@@ -8,6 +8,7 @@ import { ReactComponent as NetappLogo } from "./netapp-light.svg";
 import { ReactComponent as EventbriteLogo } from "./eventbrite-light.svg";
 import { ReactComponent as Globe } from "./globe.svg";
 import { ReactComponent as LogoUdemy } from "./logo-udemy-inverted.svg";
+import { ReactComponent as CheckMarkIcon } from "./check-mark.svg";
 
 export const Svgs = {
   StarFilledIcon,
@@ -20,4 +21,5 @@ export const Svgs = {
   EventbriteLogo,
   Globe,
   LogoUdemy,
+  CheckMarkIcon
 };
