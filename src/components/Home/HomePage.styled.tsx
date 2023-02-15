@@ -698,6 +698,7 @@ export const CourseReviewContainer = styled("div")({
   zIndex: 1,
   boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   backgroundColor: "#fff",
+  position: "relative",
 });
 
 export const AddToCartWrapper = styled("div")({
@@ -875,6 +876,12 @@ export const TotalHoursContent = styled("div")({
   fontSize: "12px",
 });
 
+export const RoundManualRecordIcon = styled("img")({
+  fontSize: "94px",
+  marginLeft: "4px",
+  marginRight: "4px",
+});
+
 export const CourseReviewIncentives = styled("div")({
   display: "flex",
   flexDirection: "column",
@@ -938,14 +945,15 @@ export const CheckMark = styled("img")({
   lineHeight: 1.4,
   fontSize: "14px",
   textAlign: "left",
-   whiteSpace: "normal",
+  whiteSpace: "normal",
   margin: 0,
   padding: 0,
   display: "flex",
   flexShrink: 0,
   width: "14px",
-  // height: "16px",
+  height: "14px",
   color: "#1c1d1f",
+  objectFit: "contain",
 });
 
 export const BlockListItemContent = styled("p")({
@@ -956,7 +964,7 @@ export const BlockListItemContent = styled("p")({
   lineHeight: 1.4,
   fontSize: "14px",
   textAlign: "left",
-  letterSpacing: "normal",
+  letterSpacing: "-0.02rem",
   whiteSpace: "normal",
   color: "#1c1d1f",
   margin: 0,

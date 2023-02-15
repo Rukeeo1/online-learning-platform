@@ -21,103 +21,120 @@ import {
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import CheckMarkIcon from "../../assets/svgs/check-mark.svg";
-import { Svgs } from "../../assets/svgs";
 
 interface CourseReviewProps {}
 
 export const CourseReview: React.FunctionComponent<CourseReviewProps> = (
   props
 ) => {
+  const courseReviews = [
+    {
+      title: "IELTS Complete Preparation for (Academic & General)",
+      updated: "Updated",
+      updatedTime: "August 2022",
+      totalHours: "18.5 total hours",
+      manualRecord: `${FiberManualRecordRoundedIcon}`,
+      totalContent: "All Levels",
+      totalSubtitle: "Subtitles",
+      incentivesText:
+        "Are you taking the IELTS TEST? Then this is the only video course you need*we cover Reading,Writing,Listening & Speaking",
+      firstblockListItem:
+        "This video course is for students taking the Academic or General IELTS test.",
+      secondblockListItem:
+        "This video is a complete IELTS Full Preparation video course.",
+      thirdblockListItem:
+        "As this IELTS video is the newest to be added to UDEMY, you will be learning the most up to date Tips & Techniques.",
+    },
+  ];
+
   return (
-    <CourseReviewContainer style={{ margin: "auto" }}>
-      <CourseViewContent>
-        <CourseReviewTitle>
-          <CourseReviewTitleAnchorTag>
-            IELTS Complete Preparation for (Academic & General)
-          </CourseReviewTitleAnchorTag>
-        </CourseReviewTitle>
+    <>
+      {courseReviews.map((review, index) => (
+        <CourseReviewContainer style={{ margin: "auto" }} key={index}>
+          <CourseViewContent>
+            <CourseReviewTitle>
+              <CourseReviewTitleAnchorTag>
+                {review.title}
+              </CourseReviewTitleAnchorTag>
+            </CourseReviewTitle>
 
-        <UpdatedCourseReview>
-          <span>Updated</span> <Span>August 2022</Span>
-        </UpdatedCourseReview>
+            <UpdatedCourseReview>
+              <span>{review.updated}</span> <Span>{review.updatedTime}</Span>
+            </UpdatedCourseReview>
 
-        <TotalHoursContainer>
-          <TotalHoursContent>18.5 total hours</TotalHoursContent>
+            <TotalHoursContainer>
+              <TotalHoursContent>{review.totalHours}</TotalHoursContent>
 
-          <FiberManualRecordRoundedIcon
-            sx={{
-              fontSize: "4px",
-              marginLeft: "4px",
-              marginRight: "4px",
-            }}
-          />
+              <FiberManualRecordRoundedIcon
+                sx={{
+                  fontSize: "4px",
+                  marginLeft: "4px",
+                  marginRight: "4px",
+                }}
+              />
 
-          <TotalHoursContent>All Levels</TotalHoursContent>
+              <TotalHoursContent>{review.totalContent}</TotalHoursContent>
 
-          <FiberManualRecordRoundedIcon
-            sx={{
-              fontSize: "4px",
-              marginLeft: "4px",
-              marginRight: "4px",
-            }}
-          />
+              <FiberManualRecordRoundedIcon
+                sx={{
+                  fontSize: "4px",
+                  marginLeft: "4px",
+                  marginRight: "4px",
+                }}
+              />
 
-          <TotalHoursContent>Subtitles</TotalHoursContent>
-        </TotalHoursContainer>
+              <TotalHoursContent>{review.totalSubtitle}</TotalHoursContent>
+            </TotalHoursContainer>
 
-        <CourseReviewIncentives>
-          <IncentivesText>
-            <p>
-              Are you taking the IELTS TEST? Then this is the only video course
-              you need*we cover Reading,Writing,Listening & Speaking
-            </p>
-          </IncentivesText>
-        </CourseReviewIncentives>
+            <CourseReviewIncentives>
+              <IncentivesText>
+                <p>{review.incentivesText}</p>
+              </IncentivesText>
+            </CourseReviewIncentives>
 
-        <BlockListItem>
-          <Svgs.CheckMarkIcon />
-          {/* <CheckMark src={CheckMarkIcon} alt='' /> */}
-          <BlockListItemContent>
-            This video course is for students taking the Academic or General
-            IELTS test.
-          </BlockListItemContent>
-        </BlockListItem>
+            <BlockListItem>
+              <CheckMark src={CheckMarkIcon} alt="" />
+              <BlockListItemContent>
+                {review.firstblockListItem}
+              </BlockListItemContent>
+            </BlockListItem>
 
-        <BlockListItem>
-          <span>+</span>
-          <BlockListItemContent>
-            This video is a complete IELTS Full Preparation video course.
-          </BlockListItemContent>
-        </BlockListItem>
+            <BlockListItem>
+              <CheckMark src={CheckMarkIcon} alt="" />
+              <BlockListItemContent>
+                {review.secondblockListItem}
+              </BlockListItemContent>
+            </BlockListItem>
 
-        <BlockListItem>
-          <span>+</span>
-          <BlockListItemContent>
-            As this IELTS video is the newest to be added to UDEMY, you will be
-            learning the most up to date Tips & Techniques.
-          </BlockListItemContent>
-        </BlockListItem>
-      </CourseViewContent>
+            <BlockListItem>
+              <CheckMark src={CheckMarkIcon} alt="" />
+              <BlockListItemContent>
+                {review.thirdblockListItem}
+              </BlockListItemContent>
+            </BlockListItem>
+          </CourseViewContent>
 
-      <AddToCartWrapper>
-        <AddToCartButton>
-          <CartButton
-            sx={{
-              ":hover": {
-                backgroundColor: "#8711D8",
-              },
-            }}
-          >
-            Add to cart
-          </CartButton>
-        </AddToCartButton>
+          <AddToCartWrapper>
+            <AddToCartButton>
+              <CartButton
+                sx={{
+                  ":hover": {
+                    backgroundColor: "#8711D8",
+                  },
+                }}
+              >
+                Add to cart
+              </CartButton>
+            </AddToCartButton>
 
-        <div>
-          <AddToWishList>
-            <FavoriteBorderOutlinedIcon />
-          </AddToWishList>
-        </div>
-      </AddToCartWrapper>
-    </CourseReviewContainer>
+            <div>
+              <AddToWishList>
+                <FavoriteBorderOutlinedIcon />
+              </AddToWishList>
+            </div>
+          </AddToCartWrapper>
+        </CourseReviewContainer>
+      ))}
+    </>
   );
 };
