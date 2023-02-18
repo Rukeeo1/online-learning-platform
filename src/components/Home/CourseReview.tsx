@@ -24,12 +24,30 @@ import CheckMarkIcon from "../../assets/svgs/check-mark.svg";
 
 interface CourseReviewProps {}
 
-export const CourseReview: React.FunctionComponent<CourseReviewProps> = (
+export const CourseReviewModal: React.FunctionComponent<CourseReviewProps> = (
   props
 ) => {
   const courseReviews = [
     {
       title: "IELTS Complete Preparation for (Academic & General)",
+      updated: "Updated",
+      updatedTime: "August 2022",
+      totalHours: "18.5 total hours",
+      manualRecord: `${FiberManualRecordRoundedIcon}`,
+      totalContent: "All Levels",
+      totalSubtitle: "Subtitles",
+      incentivesText:
+        "Are you taking the IELTS TEST? Then this is the only video course you need*we cover Reading,Writing,Listening & Speaking",
+      firstblockListItem:
+        "This video course is for students taking the Academic or General IELTS test.",
+      secondblockListItem:
+        "This video is a complete IELTS Full Preparation video course.",
+      thirdblockListItem:
+        "As this IELTS video is the newest to be added to UDEMY, you will be learning the most up to date Tips & Techniques.",
+    },
+
+    {
+      title: "Willochs Ojigbo",
       updated: "Updated",
       updatedTime: "August 2022",
       totalHours: "18.5 total hours",

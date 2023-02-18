@@ -19,6 +19,7 @@ import {
   StarIconContent,
   RateNumContent,
   CourseCardRateNum,
+  ReviewModal,
 } from "./HomePage.styled";
 import { Typography } from "@mui/material";
 import starfilled from "../../assets/svgs/star-filled-rate.svg";
@@ -38,17 +39,25 @@ interface CourseUnitCard {
     starfilled: string;
     starhalf: boolean;
     staroutline: boolean;
+    reviewModal: React.FC;
   };
+  toggleReviewModal: any;
+
+  index: any;
+  showReviewModal: any;
 }
 
 export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
   props
 ) => {
-  const { course } = props;
+  const { course, toggleReviewModal, index, showReviewModal } = props;
 
   return (
     <>
-      <CourseCarouselScrollItem>
+      <CourseCarouselScrollItem
+        onMouseEnter={() => toggleReviewModal(index)}
+        onMouseLeave={() => toggleReviewModal(null)}
+      >
         <ScrollItemContainer>
           <CourseCardImageContainer>
             <CourseCardImage src={course.img} alt="Course Card Image" />
@@ -190,6 +199,10 @@ export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
             ) : null}
           </CourseCardMainContent>
         </ScrollItemContainer>
+
+        {showReviewModal === index ? (
+          <ReviewModal>{<course.reviewModal />}</ReviewModal>
+        ) : null}
       </CourseCarouselScrollItem>
     </>
   );

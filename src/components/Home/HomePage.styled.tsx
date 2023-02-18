@@ -90,6 +90,7 @@ export const BillBoardBannerContainer = styled("div")({
   marginBottom: "48px",
 });
 
+/* Carousel Inner */
 export const CarouselInner = styled("div")({
   display: "flex",
   transition: "ease 1s",
@@ -315,7 +316,7 @@ export const CourseUnitGridCarousel = styled("div")({
   scrollSnapStop: "always",
   touchAction: "manipulation",
   overflowX: "hidden",
-  position: "relative",
+  // position: "relative",
 });
 
 export const CourseCarouselBackButton = styled("button")({
@@ -371,6 +372,7 @@ export const CourseCarouselForwardButton = styled("button")({
   zIndex: 1,
 });
 
+/* Course Card */
 export const CourseCarouselScrollItem = styled("div")({
   alignItems: "flex-start",
   display: "flex",
@@ -405,6 +407,7 @@ export const ScrollItemContainer = styled("div")({
   position: "relative",
   maxWidth: "375px",
   minWidth: "173px",
+
 });
 
 export const CourseCardImageContainer = styled("div")({
@@ -696,7 +699,6 @@ export const CourseReviewContainer = styled("div")({
   width: 340,
   border: "1px solid #d1d7dc",
   zIndex: 1,
-  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   backgroundColor: "#fff",
   position: "relative",
 });
@@ -973,4 +975,12 @@ export const BlockListItemContent = styled("p")({
   minWidth: "1px",
   width: "100%",
   marginLeft: "16px",
+});
+
+export const ReviewModal = styled("div")({
+  display: "inline-block",
+  position: "absolute",
+  top: "-80px",
+  left: "260px",
+  zIndex: 1000,
 });

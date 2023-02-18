@@ -24,6 +24,7 @@ import Aizaz from "/src/assets/images/aizaz.jpeg";
 import Reece from "/src/assets/images/reece.jpeg";
 import Mustapha from "/src/assets/images/mustapha.jpeg";
 import Maximillian from "/src/assets/images/maximillian.jpeg";
+import { CourseReviewModal } from "./CourseReview";
 
 export const CourseData = [
   {
@@ -38,6 +39,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -52,6 +54,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -66,6 +69,7 @@ export const CourseData = [
     starfilled: false,
     staroutline: false,
     starhalf: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -80,6 +84,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -94,6 +99,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -108,6 +114,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -122,6 +129,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -136,6 +144,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -150,6 +159,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -164,6 +174,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -178,6 +189,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -192,6 +204,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -206,6 +219,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -220,6 +234,7 @@ export const CourseData = [
     starfilled: true,
     starhalf: false,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -234,6 +249,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -248,6 +264,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -262,6 +279,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -276,6 +294,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -290,6 +309,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -304,6 +324,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -318,6 +339,7 @@ export const CourseData = [
     starfilled: true,
     starhalf: false,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -332,6 +354,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -346,6 +369,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: false,
     staroutline: true,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -360,6 +384,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -374,6 +399,7 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 
   {
@@ -388,5 +414,6 @@ export const CourseData = [
     starfilled: false,
     starhalf: true,
     staroutline: false,
+    reviewModal: () => <CourseReviewModal />,
   },
 ];

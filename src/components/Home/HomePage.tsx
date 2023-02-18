@@ -19,6 +19,7 @@ import {
   ViewedCourseContainer,
   ViewedCourseHeader,
   ViewedUnitCourseDetails,
+  ReviewModal,
 } from "./HomePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
@@ -34,6 +35,12 @@ interface HomeProps {
 
 export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   const [currentBillboard, setCurrentBillboard] = React.useState(0);
+
+  const [showReviewModal, setShowReviewModal] = React.useState<number | null>(
+    null
+  );
+
+  const toggleReviewModal = (value: number) => setShowReviewModal(value);
 
   const { courses } = props;
 
@@ -138,7 +145,14 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
               <CourseCarouselContainer>
                 <CourseUnitGridCarousel>
                   {courses.slice(0, 12).map((course, index) => (
-                    <CourseUnitCard course={course} key={index} />
+                    <div key={index}>
+                      <CourseUnitCard
+                        course={course}
+                        index={index}
+                        showReviewModal={showReviewModal}
+                        toggleReviewModal={toggleReviewModal}
+                      />
+                    </div>
                   ))}
                 </CourseUnitGridCarousel>
 
@@ -160,11 +174,14 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
               </ViewedCourseHeader>
 
               <CourseCarouselContainer>
-                <CourseUnitGridCarousel>
+                {/* <CourseUnitGridCarousel>
                   {courses.slice(13, 26).map((course, index) => (
-                    <CourseUnitCard course={course} key={index} />
+                    <div key={index}>
+                      <ReviewModal>{<course.reviewModal />}</ReviewModal>
+                      <CourseUnitCard course={course} />
+                    </div>
                   ))}
-                </CourseUnitGridCarousel>
+                </CourseUnitGridCarousel> */}
 
                 <CourseCarouselBackButton>
                   <ArrowBackIosNewOutlinedIcon />
