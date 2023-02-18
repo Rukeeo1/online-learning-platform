@@ -1,0 +1,252 @@
+.login-form--greeting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* max-width: 600px; */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.auth-google--social-btn {
+  margin: 0;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  min-width: 80px;
+  padding: 0 12px;
+  white-space: nowrap;
+  height: 48px;
+  color: #1c1d1f;
+  background-color: transparent;
+  border: 1px solid #1c1d1f;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: left;
+}
+
+.googleIcon {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.form-input-control {
+  margin: 0;
+  background-image: none;
+  color: #1c1d1f;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  height: 60px !important;
+  padding: 20px 16px 0;
+  /* opacity: 0; */
+  transition: opacity 100ms linear;
+  flex: 1;
+}
+
+.input-form-label {
+  color: #1c1d1f;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 8px;
+  width: 100%;
+  min-height: 28px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transform: translateY(12px);
+  transform-origin: top left;
+  right: 0;
+}
+
+.form-label-content {
+  color: #1c1d1f;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 14px;
+  pointer-events: none;
+  margin: 0;
+  flex: 1;
+  min-width: 1px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.form-label-content {
+  transition: all 0.3s ease;
+}
+
+.form-input-control:focus + .input-form-label .form-label-content {
+  transform: translateY(-90%);
+  font-size: 12px;
+  transition: all 0.5s ease;
+}
+
+.login-submit-button {
+  margin: 0;
+  background-image: none;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  min-width: 80px;
+  padding: 0 12px;
+  justify-content: center;
+  vertical-align: bottom;
+  white-space: nowrap;
+  height: 48px;
+  color: #fff;
+  background-color: #a435f0;
+  width: 100%;
+}
+
+.login-submit-button:hover {
+  background-color: #8711d8;
+}
+
+.link-underline {
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.signup-text-bold {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.organization-text-bold {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.toggle-input {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #1c1d1f;
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+  color: transparent;
+}
+
+.signup-link--terms-and-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1d1f;
+  font-size: 12px;
+}
+
+.signing-up--text {
+  text-align: center;
+  font-size: 12px;
+}
+
+.signup-form--separator-container {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+  border-top: 1px solid #d1d7dc;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.sign-login-link-underline {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
