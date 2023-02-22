@@ -361,21 +361,6 @@ export const HeaderGlobeAchor = styled("button")({
 
 /* Proifile Modal */
 export const ProfilePopOver = styled("div")({
-  // fontFamily:
-  //   "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
-  // fontWeight: 400,
-  // lineHeight: 1.4,
-  // fontSize: "14px",
-  // margin: 0,
-  // padding: 0,
-  // position: "relative",
-  // backgroundColor: "#fff",
-  // backgroundColor: "red",
-  // boxShadow:
-  //   "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
-  // color: "#1c1d1f",
-  // marginTop: "4px",
-
   display: "flex",
   color: "#1c1d1f",
   fontWeight: 400,
@@ -403,8 +388,7 @@ export const ProfilePopOverAnimation = styled("div")({
   fontSize: "14px",
   position: "relative",
   backgroundColor: "#fff",
-  boxShadow:
-    "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  border: '1px solid #d1d7dc',
   color: "#1c1d1f",
   marginTop: "4px",
 });
@@ -490,15 +474,15 @@ export const UserEmail = styled("div")({
   padding: 0,
   fontWeight: 400,
   lineHeight: 1.4,
-  fontSize: '12px',
-  display: 'block',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  color: '#6a6f73',
-  marginTop: '4px',
-  maxWidth: '154px', 
-})
+  fontSize: "12px",
+  display: "block",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
+  color: "#6a6f73",
+  marginTop: "4px",
+  maxWidth: "154px",
+});
 
 export const PopOverMenuItem = styled("ul")({
   fontSize: "inherit",
@@ -507,7 +491,6 @@ export const PopOverMenuItem = styled("ul")({
   lineHeight: 1.4,
   color: "#1c1d1f",
   margin: 0,
-  // borderTop: "1px solid #d1d7dc",
   padding: "8px 0",
   width: "100%",
 });
@@ -532,3 +515,103 @@ export const PopOverMenuList = styled("li")({
   color: "#1c1d1f",
   padding: "8px 16px",
 });
+
+export const PopOverMenuItemBlock = styled("ul")({
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  fontWeight: 400,
+  listStyle: "none",
+  margin: 0,
+  borderTop: "1px solid #d1d7dc",
+  padding: "8px 0",
+  width: "100%",
+});
+
+export const LanguageMenuList = styled("li")({
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  fontSize: "inherit",
+  fontWeight: 400,
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
+  paddingLeft: 0,
+});
+
+export const LanguageButton = styled("button")({
+  backgroundImage: "none",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  position: "relative",
+  border: "none",
+  cursor: "pointer",
+  backgroundColor: "transparent",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "auto",
+  textAlign: "left",
+  letterSpacing: "normal",
+  whiteSpace: "normal",
+  color: "#1c1d1f",
+  padding: "8px 16px",
+});
+
+export const LanguageBlockContent = styled("div")({
+  listStyle: "none",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  cursor: "pointer",
+  textAlign: "left",
+  letterSpacing: "normal",
+  whiteSpace: "normal",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  flex: 1,
+  display: "flex",
+  alignItems: "baseline",
+  justifyContent: "space-between",
+  width: "100%",
+});
+
+export const UserProfileAnchorTag = styled("a")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  textDecoration: "none",
+  borderTop: "1px solid #d1d7dc",
+  color: "#1c1d1f",
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "16px",
+  width: "100%",
+});
+
+export const UserBusinessHeading = styled("div")({
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+});
+
+export const UserBusinessDescription = styled("div")({
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: '14px',
+  color: '#6a6f73',
+  marginTop: '4px',
+})
