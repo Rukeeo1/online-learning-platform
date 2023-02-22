@@ -344,7 +344,7 @@ export const HeaderGlobeAchor = styled("button")({
   fontWeight: 700,
   lineHeight: 1.2,
   letterSpacing: "-0.32PX",
-  fontSize: "14PX",
+  fontSize: "14px",
   position: "relative",
   alignItems: "center",
   cursor: "pointer",
@@ -357,4 +357,178 @@ export const HeaderGlobeAchor = styled("button")({
   minWidth: "auto",
   padding: "0 10px",
   width: "100%",
+});
+
+/* Proifile Modal */
+export const ProfilePopOver = styled("div")({
+  // fontFamily:
+  //   "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  // fontWeight: 400,
+  // lineHeight: 1.4,
+  // fontSize: "14px",
+  // margin: 0,
+  // padding: 0,
+  // position: "relative",
+  // backgroundColor: "#fff",
+  // backgroundColor: "red",
+  // boxShadow:
+  //   "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  // color: "#1c1d1f",
+  // marginTop: "4px",
+
+  display: "flex",
+  color: "#1c1d1f",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  padding: 0,
+  // position: "absolute",
+  zIndex: 1000,
+  top: "100%",
+  right: "0px",
+  width: "260px",
+});
+
+export const ProfilePopOverAnimation = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: 0,
+  padding: 0,
+  animation: "popper--pop-in--1DH37 100ms cubic-bezier(.2,0,.38,.9) forwards",
+  width: "260px",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  position: "relative",
+  backgroundColor: "#fff",
+  boxShadow:
+    "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  color: "#1c1d1f",
+  marginTop: "4px",
+});
+
+export const PopoverInner = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  position: "relative",
+  zIndex: 1,
+  width: "100%",
+});
+
+export const ProfileUser = styled("div")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  borderBottom: "1px solid #d1d7dc",
+  color: "#1c1d1f",
+  display: "flex",
+  padding: "16px",
+  width: "100%",
+});
+
+export const UserAvatar = styled("div")({
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "24px",
+  background: "#1c1d1f",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "50%",
+  objectFit: "cover",
+  color: "#fff",
+  width: "64px",
+  height: "64px",
+});
+
+export const UserDetails = styled("div")({
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  flex: 1,
+  display: "flex",
+  alignItems: "center",
+  marginLeft: "8px",
+  minWidth: "1px",
+  wordBreak: "break-word",
+});
+
+export const UserHeading = styled("div")({
+  color: "#1c1d1f",
+  wordBreak: "break-word",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+});
+
+export const UserEmail = styled("div")({
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: '12px',
+  display: 'block',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  color: '#6a6f73',
+  marginTop: '4px',
+  maxWidth: '154px', 
+})
+
+export const PopOverMenuItem = styled("ul")({
+  fontSize: "inherit",
+  fontWeight: 400,
+  listStyle: "none",
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  margin: 0,
+  // borderTop: "1px solid #d1d7dc",
+  padding: "8px 0",
+  width: "100%",
+});
+
+export const PopOverMenuList = styled("li")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  position: "relative",
+  border: "none",
+  cursor: "pointer",
+  backgroundColor: "transparent",
+  minWidth: "auto",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  width: "100%",
+  height: "auto",
+  textAlign: "left",
+  letterSpacing: "normal",
+  whiteSpace: "normal",
+  color: "#1c1d1f",
+  padding: "8px 16px",
 });
