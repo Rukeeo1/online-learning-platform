@@ -5,6 +5,7 @@ import { Header } from "./components/Header/header";
 import { HomePage } from "./components/HomePage/homePage";
 import { LoginForm } from "./components/LoginForm/loginForm";
 import { ProfileModal } from "./components/Header/ProfileModal";
+import { LinkBar } from "./components/Header/HeaderLinkBar";
 
 // import './App.css'
 
@@ -14,7 +15,8 @@ function App() {
       <Header />
       {/* <HomePage /> */}
       {/* <LoginForm /> */}
-      <ProfileModal />
+      {/* <ProfileModal /> */}
+      <LinkBar />
     </div>
   );
 }

@@ -388,7 +388,7 @@ export const ProfilePopOverAnimation = styled("div")({
   fontSize: "14px",
   position: "relative",
   backgroundColor: "#fff",
-  border: '1px solid #d1d7dc',
+  border: "1px solid #d1d7dc",
   color: "#1c1d1f",
   marginTop: "4px",
 });
@@ -611,7 +611,103 @@ export const UserBusinessDescription = styled("div")({
   padding: 0,
   fontWeight: 400,
   lineHeight: 1.4,
-  fontSize: '14px',
-  color: '#6a6f73',
-  marginTop: '4px',
-})
+  fontSize: "14px",
+  color: "#6a6f73",
+  marginTop: "4px",
+});
+
+/* LinkBar */
+export const LinkBarContainer = styled("nav")({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  position: "relative",
+  borderTop: "1px solid #d1d7dc",
+  background: "#fff",
+  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  zIndex: "1009",
+});
+
+export const LinkBarCategories = styled("ul")({
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  fontSize: "inherit",
+  fontWeight: 400,
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
+  width: "100%",
+  maxHeight: "48px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  overflowY: "hidden",
+});
+
+export const LinkBarList = styled("li")({
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  fontSize: "inherit",
+  fontWeight: 400,
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
+  paddingLeft: 0,
+  whiteSpace: "nowrap",
+});
+
+export const LinkBarListContent = styled("div")({
+  lineHeight: 1.4,
+  color: "#1c1d1f",
+  fontSize: "inherit",
+  fontWeight: 400,
+  listStyle: "none",
+  whiteSpace: "nowrap",
+  margin: 0,
+  padding: 0,
+  position: "relative",
+  width: "100%",
+  height: "100%",
+});
+
+export const LinkBarNavButton = styled("a")({
+  margin: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "14px",
+  position: "relative",
+  alignItems: "center",
+  border: "none",
+  cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  backgroundColor: "transparent",
+  minWidth: "auto",
+  padding: "8px 16px",
+  height: "48px",
+  color: "#1c1d1f",
+});
+
+export const LinkBarText = styled("span")({
+  listStyle: "none",
+  letterSpacing: "-.02rem",
+  cursor: "pointer",
+  whiteSpace: "nowrap",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+});
