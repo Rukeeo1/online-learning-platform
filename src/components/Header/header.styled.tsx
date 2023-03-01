@@ -353,6 +353,43 @@ export const HeaderGlobeAchor = styled("button")({
   width: "100%",
 });
 
+export const HeaderUserAvatar = styled("div")({
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+  position: "relative",
+  alignItems: "center",
+  border: "none",
+  cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  height: "48px",
+  color: "#5624d0",
+  backgroundColor: "transparent",
+  minWidth: "auto",
+  padding: 0,
+  margin: "12px 0",
+});
+
+export const HeaderUser = styled("div")({
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "14px",
+  background: "#1c1d1f",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "50%",
+  objectFit: "cover",
+  color: "#fff",
+  margin: "8px",
+  width: "32px",
+  height: "32px",
+});
+
 /* Proifile Modal */
 export const ProfilePopOver = styled("div")({
   display: "flex",

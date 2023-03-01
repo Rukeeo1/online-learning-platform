@@ -20,6 +20,8 @@ import {
   HeaderButtonAchor,
   HeaderGlobeButton,
   HeaderGlobeAchor,
+  HeaderUserAvatar,
+  HeaderUser,
 } from "./header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
@@ -140,6 +142,10 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
             />
           </CartAnchor>
         </CartContent>
+
+        <HeaderUserAvatar>
+          <HeaderUser>WO</HeaderUser>
+        </HeaderUserAvatar>
 
         {/* <HeaderButton>
           <HeaderButtonAchor
