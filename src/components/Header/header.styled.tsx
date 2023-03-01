@@ -6,28 +6,24 @@ export const StyledHeader = styled("header")({
   justifyContent: "center",
   backgroundColor: "#FFFFFF",
   width: "100%",
-  height: 72,
-  fontFamily: "sans-serif",
+
+  // boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
   color: "#1c1d1f",
   margin: 0,
   padding: 0,
-  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   zIndex: 1010,
-  position: "relative",
-
-  "@media(maxWidth: 480px)": {
-    width: "80%",
-    backgroundColor: "red",
-  },
 });
 
-export const ContentHeader = styled("div")({
+export const HeaderContent = styled("div")({
   color: "#1c1d1f",
   margin: 0,
-  width: "100%",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
@@ -36,8 +32,8 @@ export const ContentHeader = styled("div")({
   padding: "0 24px",
   position: "relative",
   zIndex: 1010,
+  width: "100%",
   alignItems: "center",
-  justifyContent: "space-between",
   display: "flex",
 });
 
@@ -50,11 +46,10 @@ export const Nav = styled("nav")({
   display: "flex",
   alignItems: "center",
   maxWidth: 90.34,
-  width: "6.49%",
-  height: 48,
+  // width: "6.49%",
   color: "#1c1d1f",
   fontWeight: 400,
-  lineHeight: "1.4",
+  lineHeight: 1.4,
   fontSize: "14px",
   margin: 0,
   padding: 0,
@@ -66,7 +61,7 @@ export const CategoryButton = styled("button")({
   justifyContent: "center",
   alignItems: "center",
   fontWeight: 700,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: 14,
   position: "relative",
   border: "none",
@@ -84,7 +79,7 @@ export const CategoryButton = styled("button")({
 
 export const Paragraph = styled("span")({
   fontSize: 14,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   cursor: "pointer",
   margin: 0,
   padding: 0,
@@ -152,7 +147,7 @@ export const InputSearchButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "16px",
   position: "relative",
   border: "none",
@@ -168,7 +163,7 @@ export const InputSearchButton = styled("button")({
 export const SearchButton = styled("img")({
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "16px",
   cursor: "not-allowed",
   margin: 0,
@@ -185,11 +180,10 @@ export const UdemyBusiness = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  maxWidth: 125.44,
-  width: "9.0114%",
+  // width: 125.44,
   height: "100%",
   color: "#1c1d1f",
-  fontWeight: "400",
+  fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
   margin: 0,
@@ -198,34 +192,34 @@ export const UdemyBusiness = styled("div")({
 });
 
 export const UdemyBusinessAnchor = styled("a")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  textDecoration: " none",
+  textDecoration: "none",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "16px",
   position: "relative",
+  alignItems: "center",
   border: "none",
   cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
   height: "48px",
   color: "#5624d0",
   backgroundColor: "transparent",
+  minWidth: "auto",
   margin: "12px 0",
   padding: "0 12px",
-  width: "100%",
 });
 
-export const TeachOnUdemy = styled("div")({
+export const MyLearning = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  maxWidth: 125.44,
-  width: "9.0114%",
-  height: "100%",
   color: "#1c1d1f",
-  fontWeight: "400",
+  fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
   margin: 0,
@@ -233,24 +227,24 @@ export const TeachOnUdemy = styled("div")({
   position: "relative",
 });
 
-export const TeachOnUdemyAnchor = styled("a")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  textDecoration: " none",
+export const MyLearningAnchor = styled("a")({
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "16px",
   position: "relative",
+  alignItems: "center",
   border: "none",
   cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
   height: "48px",
   color: "#5624d0",
   backgroundColor: "transparent",
+  minWidth: "auto",
   margin: "12px 0",
   padding: "0 12px",
-  width: "100%",
 });
 
 export const CartContent = styled("div")({
@@ -273,7 +267,7 @@ export const CartAnchor = styled("a")({
   textDecoration: "none",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "16px",
   position: "relative",
   border: "none",
@@ -307,7 +301,7 @@ export const HeaderButtonAchor = styled("button")({
   textDecoration: "none",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32px",
+  letterSpacing: "-.02rem",
   fontSize: "14px",
   position: "relative",
   alignItems: "center",
@@ -343,7 +337,7 @@ export const HeaderGlobeAchor = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.32PX",
+  letterSpacing: "-.02rem",
   fontSize: "14px",
   position: "relative",
   alignItems: "center",
@@ -618,9 +612,9 @@ export const UserBusinessDescription = styled("div")({
 
 /* LinkBar */
 export const LinkBarContainer = styled("nav")({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
@@ -710,4 +704,15 @@ export const LinkBarText = styled("span")({
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
+});
+
+export const Dropdown = styled("div")<{ show?: boolean }>({
+  position: "absolute",
+  background: "white",
+  borderRadius: "5px",
+  bottom: "-150px",
+  minWidth: "250px",
+  margin: "0 10px",
+  minHeight: "150px",
+  padding: "0 10px",
 });
