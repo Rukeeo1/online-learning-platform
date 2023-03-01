@@ -45,8 +45,7 @@ export const Logo = styled("img")({
 export const Nav = styled("nav")({
   display: "flex",
   alignItems: "center",
-  maxWidth: 90.34,
-  // width: "6.49%",
+  width: 90.34,
   color: "#1c1d1f",
   fontWeight: 400,
   lineHeight: 1.4,
@@ -77,7 +76,7 @@ export const CategoryButton = styled("button")({
   background: "0 0",
 });
 
-export const Paragraph = styled("span")({
+export const HeaderSpan = styled("span")({
   fontSize: 14,
   letterSpacing: "-.02rem",
   cursor: "pointer",
@@ -180,7 +179,6 @@ export const UdemyBusiness = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  // width: 125.44,
   height: "100%",
   color: "#1c1d1f",
   fontWeight: 400,
@@ -290,13 +288,10 @@ export const HeaderButton = styled("div")({
   fontSize: "14px",
   margin: 0,
   padding: 0,
-  marginLeft: 8,
-  maxWidth: 80,
-  width: "5.7475%",
-  height: 40,
+  marginLeft: "8px",
 });
 
-export const HeaderButtonAchor = styled("button")({
+export const HeaderButtonAchor = styled("a")({
   margin: 0,
   textDecoration: "none",
   fontWeight: 700,
@@ -306,35 +301,30 @@ export const HeaderButtonAchor = styled("button")({
   position: "relative",
   alignItems: "center",
   cursor: "pointer",
-  display: "flex",
+  display: "inline-flex",
+  minWidth: "80px",
   padding: "0 12px",
   justifyContent: "center",
-  width: "100%",
-  height: 40,
+  whiteSpace: "nowrap",
+  height: "40px",
   color: "#1c1d1f",
   backgroundColor: "transparent",
   border: "1px solid #1c1d1f",
-  outline: 0,
 });
 
 export const HeaderGlobeButton = styled("div")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
   color: "#1c1d1f",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
   margin: 0,
   padding: 0,
-  marginLeft: 8,
-  maxWidth: 40,
-  width: "2.874%",
-  height: 40,
+  marginLeft: "8px",
 });
 
 export const HeaderGlobeAchor = styled("button")({
   margin: 0,
+  backgroundImage: "none",
   fontWeight: 700,
   lineHeight: 1.2,
   letterSpacing: "-.02rem",
@@ -342,15 +332,16 @@ export const HeaderGlobeAchor = styled("button")({
   position: "relative",
   alignItems: "center",
   cursor: "pointer",
-  display: "flex",
+  display: "inline-flex",
   justifyContent: "center",
-  height: 40,
+  whiteSpace: "nowrap",
+  height: "40px",
   color: "#1c1d1f",
   backgroundColor: "transparent",
-  border: "1px solid #1c1d1f;",
+  border: "1px solid #1c1d1f",
   minWidth: "auto",
   padding: "0 10px",
-  width: "100%",
+  width: "40px",
 });
 
 export const HeaderUserAvatar = styled("div")({

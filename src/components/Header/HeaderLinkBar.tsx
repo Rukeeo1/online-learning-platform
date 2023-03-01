@@ -8,7 +8,7 @@ import {
   LinkBarText,
   HeaderButton,
   HeaderButtonAchor,
-  Paragraph,
+  HeaderSpan,
   Dropdown,
 } from "./header.styled";
 
@@ -23,14 +23,14 @@ const Component1 = ({ title }: any) => (
           backgroundColor: "#1c1d1f",
         }}
       >
-        <Paragraph
+        <HeaderSpan
           sx={{
             color: "#FFFFFF",
             fontWeight: 700,
           }}
         >
           Sign up
-        </Paragraph>
+        </HeaderSpan>
       </HeaderButtonAchor>
     </HeaderButton>
   </div>

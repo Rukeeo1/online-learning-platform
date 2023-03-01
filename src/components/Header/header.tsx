@@ -5,7 +5,7 @@ import {
   Nav,
   StyledHeader,
   CategoryButton,
-  Paragraph,
+  HeaderSpan,
   HeaderFormField,
   Form,
   FormInputField,
@@ -40,7 +40,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
 
         <Nav>
           <CategoryButton>
-            <Paragraph
+            <HeaderSpan
               sx={{
                 ":hover": {
                   color: "#5623D0",
@@ -48,7 +48,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             >
               Categories
-            </Paragraph>
+            </HeaderSpan>
           </CategoryButton>
         </Nav>
 
@@ -64,7 +64,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
 
         <UdemyBusiness>
           <UdemyBusinessAnchor>
-            <Paragraph
+            <HeaderSpan
               sx={{
                 ":hover": {
                   color: "#5623D0",
@@ -72,13 +72,13 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             >
               Udemy Business
-            </Paragraph>
+            </HeaderSpan>
           </UdemyBusinessAnchor>
         </UdemyBusiness>
 
         <UdemyBusiness>
           <UdemyBusinessAnchor>
-            <Paragraph
+            <HeaderSpan
               sx={{
                 ":hover": {
                   color: "#5623D0",
@@ -86,13 +86,13 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             >
               Teach on Udemy
-            </Paragraph>
+            </HeaderSpan>
           </UdemyBusinessAnchor>
         </UdemyBusiness>
 
         <MyLearning>
           <MyLearningAnchor>
-            <Paragraph
+            <HeaderSpan
               sx={{
                 ":hover": {
                   color: "#5623D0",
@@ -100,22 +100,9 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             >
               My learning
-            </Paragraph>
+            </HeaderSpan>
           </MyLearningAnchor>
         </MyLearning>
-
-        <CartContent>
-          <CartAnchor>
-            <FavoriteBorderOutlinedIcon
-              sx={{
-                color: "#1c1d1f",
-                ":hover": {
-                  color: "#5623D0",
-                },
-              }}
-            />
-          </CartAnchor>
-        </CartContent>
 
         <CartContent>
           <CartAnchor>
@@ -130,7 +117,68 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
           </CartAnchor>
         </CartContent>
 
-        <CartContent>
+        <HeaderButton>
+          <HeaderButtonAchor
+            sx={{
+              ":hover": {
+                backgroundColor: "#F5F5F5",
+              },
+            }}
+          >
+            <HeaderSpan
+              sx={{
+                color: "#1c1d1f",
+                fontWeight: 700,
+              }}
+            >
+              Log in
+            </HeaderSpan>
+          </HeaderButtonAchor>
+        </HeaderButton>
+
+        <HeaderButton>
+          <HeaderButtonAchor
+            sx={{
+              backgroundColor: "#1c1d1f",
+            }}
+          >
+            <HeaderSpan
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: 700,
+              }}
+            >
+              Sign up
+            </HeaderSpan>
+          </HeaderButtonAchor>
+        </HeaderButton>
+
+        <HeaderGlobeButton>
+          <HeaderGlobeAchor
+            sx={{
+              ":hover": {
+                backgroundColor: "#F5F5F5",
+              },
+            }}
+          >
+            <LanguageOutlinedIcon />
+          </HeaderGlobeAchor>
+        </HeaderGlobeButton>
+
+        {/* <CartContent>
+          <CartAnchor>
+            <ShoppingCartOutlinedIcon
+              sx={{
+                color: "#1c1d1f",
+                ":hover": {
+                  color: "#5623D0",
+                },
+              }}
+            />
+          </CartAnchor>
+        </CartContent> */}
+
+        {/* <CartContent>
           <CartAnchor>
             <NotificationsNoneOutlinedIcon
               sx={{
@@ -141,59 +189,11 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             />
           </CartAnchor>
-        </CartContent>
+        </CartContent> */}
 
-        <HeaderUserAvatar>
+        {/* <HeaderUserAvatar>
           <HeaderUser>WO</HeaderUser>
-        </HeaderUserAvatar>
-
-        {/* <HeaderButton>
-          <HeaderButtonAchor
-            sx={{
-              ":hover": {
-                backgroundColor: "#F5F5F5",
-              },
-            }}
-          >
-            <Paragraph
-              sx={{
-                color: "#1c1d1f",
-                fontWeight: 700,
-              }}
-            >
-              Log in
-            </Paragraph>
-          </HeaderButtonAchor>
-        </HeaderButton>
-
-        <HeaderButton>
-          <HeaderButtonAchor
-            sx={{
-              backgroundColor: "#1c1d1f",
-            }}
-          >
-            <Paragraph
-              sx={{
-                color: "#FFFFFF",
-                fontWeight: 700,
-              }}
-            >
-              Sign up
-            </Paragraph>
-          </HeaderButtonAchor>
-        </HeaderButton> */}
-
-        {/* <HeaderGlobeButton>
-          <HeaderGlobeAchor
-            sx={{
-              ":hover": {
-                backgroundColor: "#F5F5F5",
-              },
-            }}
-          >
-            <LanguageOutlinedIcon />
-          </HeaderGlobeAchor>
-        </HeaderGlobeButton> */}
+        </HeaderUserAvatar> */}
       </HeaderContent>
     </StyledHeader>
   );
