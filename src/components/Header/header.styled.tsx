@@ -45,7 +45,6 @@ export const Logo = styled("img")({
 export const Nav = styled("nav")({
   display: "flex",
   alignItems: "center",
-  width: 90.34,
   color: "#1c1d1f",
   fontWeight: 400,
   lineHeight: 1.4,
@@ -88,14 +87,14 @@ export const HeaderSpan = styled("span")({
 });
 
 export const HeaderFormField = styled("div")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
   color: "#1c1d1f",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
   padding: 0,
+  minWidth: "180px",
   position: "relative",
   flexGrow: 1,
   height: "48px",
@@ -103,33 +102,32 @@ export const HeaderFormField = styled("div")({
   borderRadius: "9999px",
   backgroundColor: "#f7f9fa",
   margin: "0 12px",
-  width: "45.606%",
+  maxWidth: "none",
 });
 
 export const Form = styled("form")({
   color: "#1c1d1f",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
   margin: 0,
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
   height: "100%",
   padding: "0 24px 0 0",
   flexDirection: "row-reverse",
-  width: "98.93208%",
-  position: "relative",
 });
 
 export const FormInputField = styled("input")({
   margin: 0,
   color: "#1c1d1f",
-  fontWeight: "400",
-  lineHeight: "1.4",
+  fontWeight: 400,
+  lineHeight: 1.4,
   fontSize: "14px",
   borderRadius: 0,
-  display: "flex",
+  display: "block",
   width: "100%",
   height: "34px",
   border: 0,
@@ -140,20 +138,22 @@ export const FormInputField = styled("input")({
 });
 
 export const InputSearchButton = styled("button")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
   letterSpacing: "-.02rem",
   fontSize: "16px",
   position: "relative",
+  alignItems: "center",
   border: "none",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
   height: "48px",
   width: "48px",
   color: "#5624d0",
   backgroundColor: "transparent",
+  minWidth: "auto",
   padding: 0,
   cursor: "not-allowed",
   opacity: 0.5,
@@ -175,7 +175,7 @@ export const SearchButton = styled("img")({
   color: "#1c1d1f",
 });
 
-export const UdemyBusiness = styled("div")({
+export const TeachOnUdemy = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -189,43 +189,10 @@ export const UdemyBusiness = styled("div")({
   position: "relative",
 });
 
-export const UdemyBusinessAnchor = styled("a")({
+export const TeachOnUdemyAnchor = styled("a")({
   textDecoration: "none",
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
-  fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-.02rem",
-  fontSize: "16px",
-  position: "relative",
-  alignItems: "center",
-  border: "none",
-  cursor: "pointer",
-  display: "inline-flex",
-  justifyContent: "center",
-  whiteSpace: "nowrap",
-  height: "48px",
-  color: "#5624d0",
-  backgroundColor: "transparent",
-  minWidth: "auto",
-  margin: "12px 0",
-  padding: "0 12px",
-});
-
-export const MyLearning = styled("div")({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  color: "#1c1d1f",
-  fontWeight: 400,
-  lineHeight: 1.4,
-  fontSize: "14px",
-  margin: 0,
-  padding: 0,
-  position: "relative",
-});
-
-export const MyLearningAnchor = styled("a")({
   fontWeight: 700,
   lineHeight: 1.2,
   letterSpacing: "-.02rem",

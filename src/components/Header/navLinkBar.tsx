@@ -12,7 +12,7 @@ import {
   Dropdown,
 } from "./header.styled";
 
-interface linkBarProps {}
+interface navLinkBarProps {}
 
 const Component1 = ({ title }: any) => (
   <div>
@@ -79,7 +79,7 @@ const linkItems = [
   },
 ];
 
-export const LinkBar: React.FunctionComponent<linkBarProps> = (props) => {
+export const NavLinkBar: React.FunctionComponent<navLinkBarProps> = (props) => {
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
