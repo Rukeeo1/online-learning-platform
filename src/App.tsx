@@ -8,10 +8,6 @@ import { NavLinkBar } from "./components/Header/navLinkBar";
 import { ProfileModal } from "./components/Header/profileModal";
 import { headerIcons, headerLinks } from "./components/Header/headerDetails";
 
-
-
-// import './App.css'
-
 function App() {
   return (
     <div className="App">
@@ -19,7 +15,7 @@ function App() {
       <NavLinkBar />
       {/* <HomePage /> */}
       {/* <LoginForm /> */}
-      <ProfileModal />
+      {/* <ProfileModal /> */}
     </div>
   );
 }
