@@ -2,6 +2,7 @@ import * as React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import { Component1 } from "./component";
 
 export const headerLinks = [
   {
@@ -51,5 +52,48 @@ export const headerIcons = [
         }}
       />
     ),
+  },
+];
+
+export const linkItems = [
+  {
+    title: "Development",
+    dropdown: () => <Component1 title="Business" />,
+  },
+  {
+    title: "Business",
+    dropdown: () => <Component1 title="Teach on Udemy" />,
+  },
+  {
+    title: "Finance & Accounting",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "IT & Software",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Office Productivity",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Personal Development",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Design",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Marketing",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Health & Fitness",
+    dropdown: () => <Component1 title="My learning" />,
+  },
+  {
+    title: "Music",
+    dropdown: () => <Component1 title="My learning" />,
   },
 ];
