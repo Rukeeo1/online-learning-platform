@@ -10,21 +10,21 @@ import {
 } from "./header.styled";
 
 interface navLinkBarProps {
-  linkItems: any[];
+  navLinks: any[];
 }
 
 export const NavLinkBar: React.FunctionComponent<navLinkBarProps> = (props) => {
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
-  const { linkItems } = props;
+  const { navLinks } = props;
 
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
 
   return (
     <LinkBarContainer>
       <LinkBarCategories>
-        {linkItems.map((item, index) => (
+        {navLinks.map((item, index) => (
           <div key={index}>
             <LinkBarList>
               <LinkBarListContent>

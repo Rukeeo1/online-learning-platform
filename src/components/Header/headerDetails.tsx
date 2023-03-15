@@ -55,7 +55,7 @@ export const headerIcons = [
   },
 ];
 
-export const linkItems = [
+export const navLinks = [
   {
     title: "Development",
     dropdown: () => <Component1 title="Business" />,
