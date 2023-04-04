@@ -360,11 +360,7 @@ export const HeaderDropdown = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  // position: "absolute",
-  // zIndex: 1000,
-  top: "100%",
-  right: "0px",
-  background: "red",
+  zIndex: 1000,
 });
 
 export const HeaderAnimationWrapper = styled("div")({
@@ -379,7 +375,6 @@ export const HeaderAnimationWrapper = styled("div")({
   // opacity: 0,
   animation:
     "popper-module--pop-in--1Pg2a 100ms cubic-bezier(.2,0,.38,.9) forwards",
-  background: "yellow",
 });
 
 export const HeaderPopover = styled("div")({
@@ -390,11 +385,9 @@ export const HeaderPopover = styled("div")({
   margin: 0,
   padding: 0,
   position: "relative",
-  // backgroundColor: "#fff",
-  backgroundColor: "green",
-
-  // boxShadow:
-  //   "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  backgroundColor: "#fff",
+  boxShadow:
+    "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   color: "#1c1d1f",
   marginTop: "4px",
   width: "100%",
@@ -402,6 +395,9 @@ export const HeaderPopover = styled("div")({
 
 export const HeaderMenu = styled("div")({
   display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
@@ -427,6 +423,9 @@ export const HeaderMenuContent = styled("div")({
 
 export const HeaderMenuTitle = styled("div")({
   display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   color: "#1c1d1f",
   textAlign: "center",
   margin: 0,
@@ -436,6 +435,27 @@ export const HeaderMenuTitle = styled("div")({
   letterspacing: "-.02rem",
   fontSize: "19px",
   marginBottom: "16px",
+});
+
+export const HeaderMenuButton = styled("a")({
+  margin: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "16px",
+  position: "relative",
+  alignItems: "center",
+  border: "none",
+  cursor: "pointer",
+  display: "inline-flex",
+  minWidth: "80px",
+  padding: "0 12px",
+  justifyContent: "center",
+  height: "48px",
+  color: "#fff",
+  backgroundColor: "#1c1d1f",
+  whiteSpace: "nowrap",
+  width: "100%",
 });
 
 /* Proifile Modal */
@@ -793,10 +813,7 @@ export const LinkBarText = styled("span")({
 
 export const Dropdown = styled("div")<{ show?: boolean }>({
   position: "absolute",
-  top: "76px",
-  // right: "438px",
-  // background: "white",
-  borderRadius: "5px",
+  top: "73px",
+  background: "0 0",
   minWidth: "288px",
-  background: "wheat",
 });

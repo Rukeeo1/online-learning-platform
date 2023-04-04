@@ -6,18 +6,20 @@ import {
   HeaderMenu,
   HeaderMenuContent,
   HeaderMenuTitle,
+  HeaderMenuButton,
 } from "./header.styled";
 
 interface componentProps {
   title1: string;
   title2: string;
   title3: string;
+  buttonTitle: string;
 }
 
 export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
   props
 ) => {
-  const { title1, title2, title3 } = props;
+  const { title1, title2, title3, buttonTitle } = props;
 
   return (
     <HeaderDropdown>
@@ -25,9 +27,15 @@ export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
         <HeaderPopover>
           <HeaderMenu>
             <HeaderMenuContent>
-              <HeaderMenuTitle>{title1}</HeaderMenuTitle>
-              <HeaderMenuTitle>{title2}</HeaderMenuTitle>
-              <HeaderMenuTitle>{title3}</HeaderMenuTitle>
+              <HeaderMenuTitle>
+                <span>{title1}</span>
+                <span>{title2}</span>
+                <span>{title3}</span>
+              </HeaderMenuTitle>
+
+              <HeaderMenuButton>
+                <span>{buttonTitle}</span>
+              </HeaderMenuButton>
             </HeaderMenuContent>
           </HeaderMenu>
         </HeaderPopover>

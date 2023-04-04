@@ -6,32 +6,38 @@ import { HeaderMenuDropdown } from "./headerDropdown";
 export const headerLinks = [
   {
     title: "Udemy Business",
+
     dropdown: () => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
-        title3="anytime, anywhere"
+        title3="anytime, anywhere."
+        buttonTitle="Try Udemy Business"
       />
     ),
   },
 
   {
     title: "Teach on Udemy",
+
     dropdown: () => (
       <HeaderMenuDropdown
-        title1="Get your team access to over"
-        title2="19000 top Udemy courses,"
-        title3="anytime, anywhere"
+        title1="Turn what you know into an"
+        title2="opportunity and reach"
+        title3="millions around the world."
+        buttonTitle="Learn more"
       />
     ),
   },
   {
     title: "My learning",
+    buttonTitle: "Learn more",
     dropdown: () => (
       <HeaderMenuDropdown
-        title1="Get your team access to over"
-        title2="19000 top Udemy courses,"
-        title3="anytime, anywhere"
+        title1="Start learning from over"
+        title2="213,000 courses today."
+        title3=""
+        buttonTitle="Browse now"
       />
     ),
   },
@@ -84,6 +90,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -94,6 +101,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -104,6 +112,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -114,6 +123,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -124,6 +134,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -134,6 +145,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -144,6 +156,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -154,6 +167,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -164,6 +178,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
@@ -174,6 +189,7 @@ export const navLinks = [
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
+        buttonTitle="Learn more"
       />
     ),
   },
