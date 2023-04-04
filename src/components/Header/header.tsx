@@ -20,6 +20,7 @@ import {
   HeaderGlobeAchor,
   HeaderUserAvatar,
   HeaderUser,
+  Dropdown,
 } from "./header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
@@ -31,142 +32,15 @@ interface headerProps {
 }
 
 export const Header: React.FunctionComponent<headerProps> = (props) => {
+  const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
+    null
+  );
+
   const { headerLinks, headerIcons } = props;
 
+  const toggleDropDown = (value: number | null) => setDropDownToShow(value);
+
   return (
-    // <StyledHeader>
-    //   <HeaderContent>
-    //     <Logo src={UdemyLogo} alt="" />
-
-    //     <Nav>
-    //       <CategoryButton>
-    //         <HeaderSpan
-    //           sx={{
-    //             ":hover": {
-    //               color: "#5623D0",
-    //             },
-    //           }}
-    //         >
-    //           Categories
-    //         </HeaderSpan>
-    //       </CategoryButton>
-    //     </Nav>
-
-    //     <HeaderFormField>
-    //       <Form>
-    //         <FormInputField placeholder="Search for anything"></FormInputField>
-
-    //         <InputSearchButton>
-    //           <SearchIcon style={{ color: "#1c1d1f" }} />
-    //         </InputSearchButton>
-    //       </Form>
-    //     </HeaderFormField>
-
-    //     <TeachOnUdemy>
-    //       <TeachOnUdemyAnchor>
-    //         <HeaderSpan
-    //           sx={{
-    //             ":hover": {
-    //               color: "#5623D0",
-    //             },
-    //           }}
-    //         >
-    //           Udemy Business
-    //         </HeaderSpan>
-    //       </TeachOnUdemyAnchor>
-    //     </TeachOnUdemy>
-
-    //     <TeachOnUdemy>
-    //       <TeachOnUdemyAnchor>
-    //         <HeaderSpan
-    //           sx={{
-    //             ":hover": {
-    //               color: "#5623D0",
-    //             },
-    //           }}
-    //         >
-    //           Teach on Udemy
-    //         </HeaderSpan>
-    //       </TeachOnUdemyAnchor>
-    //     </TeachOnUdemy>
-
-    //     <MyLearning>
-    //       <MyLearningAnchor>
-    //         <HeaderSpan
-    //           sx={{
-    //             ":hover": {
-    //               color: "#5623D0",
-    //             },
-    //           }}
-    //         >
-    //           My learning
-    //         </HeaderSpan>
-    //       </MyLearningAnchor>
-    //     </MyLearning>
-
-    //     <CartContent>
-    //       <CartAnchor>
-    //         <ShoppingCartOutlinedIcon
-    //           sx={{
-    //             color: "#1c1d1f",
-    //             ":hover": {
-    //               color: "#5623D0",
-    //             },
-    //           }}
-    //         />
-    //       </CartAnchor>
-    //     </CartContent>
-
-    //     <HeaderButton>
-    //       <HeaderButtonAchor
-    //         sx={{
-    //           ":hover": {
-    //             backgroundColor: "#F5F5F5",
-    //           },
-    //         }}
-    //       >
-    //         <HeaderSpan
-    //           sx={{
-    //             color: "#1c1d1f",
-    //             fontWeight: 700,
-    //           }}
-    //         >
-    //           Log in
-    //         </HeaderSpan>
-    //       </HeaderButtonAchor>
-    //     </HeaderButton>
-
-    //     <HeaderButton>
-    //       <HeaderButtonAchor
-    //         sx={{
-    //           backgroundColor: "#1c1d1f",
-    //         }}
-    //       >
-    //         <HeaderSpan
-    //           sx={{
-    //             color: "#FFFFFF",
-    //             fontWeight: 700,
-    //           }}
-    //         >
-    //           Sign up
-    //         </HeaderSpan>
-    //       </HeaderButtonAchor>
-    //     </HeaderButton>
-
-    //     <HeaderGlobeButton>
-    //       <HeaderGlobeAchor
-    //         sx={{
-    //           ":hover": {
-    //             backgroundColor: "#F5F5F5",
-    //           },
-    //         }}
-    //       >
-    //         <LanguageOutlinedIcon />
-    //       </HeaderGlobeAchor>
-    //     </HeaderGlobeButton>
-    //   </HeaderContent>
-    // </StyledHeader>
-
     <StyledHeader>
       <HeaderContent>
         <Logo src={UdemyLogo} alt="" />
@@ -196,7 +70,10 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
         </HeaderFormField>
         {headerLinks.map((link, index) => (
           <div key={index}>
-            <TeachOnUdemy>
+            <TeachOnUdemy
+              onMouseEnter={() => toggleDropDown(index)}
+              onMouseLeave={() => toggleDropDown(null)}
+            >
               <TeachOnUdemyAnchor>
                 <HeaderSpan
                   sx={{
@@ -209,6 +86,9 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
                 </HeaderSpan>
               </TeachOnUdemyAnchor>
             </TeachOnUdemy>
+            {dropDownToShow === index ? (
+              <Dropdown>{<link.dropdown />}</Dropdown>
+            ) : null}
           </div>
         ))}
 

@@ -6,7 +6,6 @@ export const StyledHeader = styled("header")({
   justifyContent: "center",
   backgroundColor: "#FFFFFF",
   width: "100%",
-
   // boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
@@ -346,6 +345,94 @@ export const HeaderUser = styled("div")({
   margin: "8px",
   width: "32px",
   height: "32px",
+});
+
+/* Header Dropdown  */
+export const HeaderDropdown = styled("div")({
+  color: "#1c1d1f",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  padding: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  // position: "absolute",
+  // zIndex: 1000,
+  top: "100%",
+  right: "0px",
+  background: "red",
+});
+
+export const HeaderAnimationWrapper = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  color: "#1c1d1f",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  padding: 0,
+  // opacity: 0,
+  animation:
+    "popper-module--pop-in--1Pg2a 100ms cubic-bezier(.2,0,.38,.9) forwards",
+});
+
+export const HeaderPopover = styled("div")({
+  display: "flex",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  margin: 0,
+  padding: 0,
+  position: "relative",
+  backgroundColor: "#fff",
+  // boxShadow:
+  //   "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  color: "#1c1d1f",
+  marginTop: "4px",
+  width: "100%",
+});
+
+export const HeaderMenu = styled("div")({
+  display: "flex",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  minWidth: "288px",
+});
+
+export const HeaderMenuContent = styled("div")({
+  display: "flex",
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "14px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: "16px",
+  textAlign: "center",
+});
+
+export const HeaderMenuTitle = styled("div")({
+  display: "flex",
+  color: "#1c1d1f",
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterspacing: "-.02rem",
+  fontSize: "19px",
+  marginBottom: "16px",
 });
 
 /* Proifile Modal */

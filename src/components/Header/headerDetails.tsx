@@ -2,17 +2,38 @@ import * as React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import { Component1 } from "./component";
+import { HeaderMenuDropdown } from "./headerDropdown";
 
 export const headerLinks = [
   {
     title: "Udemy Business",
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Teach on Udemy",
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "My learning",
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
 ];
 
@@ -58,42 +79,102 @@ export const headerIcons = [
 export const navLinks = [
   {
     title: "Development",
-    dropdown: () => <Component1 title="Business" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Business",
-    dropdown: () => <Component1 title="Teach on Udemy" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Finance & Accounting",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "IT & Software",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Office Productivity",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Personal Development",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Design",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Marketing",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Health & Fitness",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
   {
     title: "Music",
-    dropdown: () => <Component1 title="My learning" />,
+    dropdown: () => (
+      <HeaderMenuDropdown
+        title1="Get your team access to over"
+        title2="19000 top Udemy courses,"
+        title3="anytime, anywhere"
+      />
+    ),
   },
 ];
