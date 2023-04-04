@@ -379,6 +379,7 @@ export const HeaderAnimationWrapper = styled("div")({
   // opacity: 0,
   animation:
     "popper-module--pop-in--1Pg2a 100ms cubic-bezier(.2,0,.38,.9) forwards",
+  background: "yellow",
 });
 
 export const HeaderPopover = styled("div")({
@@ -389,7 +390,9 @@ export const HeaderPopover = styled("div")({
   margin: 0,
   padding: 0,
   position: "relative",
-  backgroundColor: "#fff",
+  // backgroundColor: "#fff",
+  backgroundColor: "green",
+
   // boxShadow:
   //   "0 0 0 1px #d1d7dc,0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   color: "#1c1d1f",
@@ -410,9 +413,9 @@ export const HeaderMenu = styled("div")({
 
 export const HeaderMenuContent = styled("div")({
   display: "flex",
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
@@ -790,11 +793,10 @@ export const LinkBarText = styled("span")({
 
 export const Dropdown = styled("div")<{ show?: boolean }>({
   position: "absolute",
-  background: "white",
+  top: "76px",
+  // right: "438px",
+  // background: "white",
   borderRadius: "5px",
-  bottom: "-150px",
-  minWidth: "250px",
-  margin: "0 10px",
-  minHeight: "150px",
-  padding: "0 10px",
+  minWidth: "288px",
+  background: "wheat",
 });

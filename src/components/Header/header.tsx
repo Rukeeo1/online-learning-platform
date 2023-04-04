@@ -26,9 +26,18 @@ import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 
+interface HeaderLink {
+  title: string;
+  dropdown: React.FunctionComponent<any>;
+}
+
+interface HeaderIcon {
+  linkIcon: React.FunctionComponent<any>;
+}
+
 interface headerProps {
-  headerLinks: any[];
-  headerIcons: any[];
+  headerLinks: HeaderLink[];
+  headerIcons: HeaderIcon[];
 }
 
 export const Header: React.FunctionComponent<headerProps> = (props) => {
@@ -68,29 +77,38 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
             </InputSearchButton>
           </Form>
         </HeaderFormField>
-        {headerLinks.map((link, index) => (
-          <div key={index}>
-            <TeachOnUdemy
-              onMouseEnter={() => toggleDropDown(index)}
-              onMouseLeave={() => toggleDropDown(null)}
-            >
-              <TeachOnUdemyAnchor>
-                <HeaderSpan
-                  sx={{
-                    ":hover": {
-                      color: "#5623D0",
-                    },
-                  }}
-                >
-                  {link.title}
-                </HeaderSpan>
-              </TeachOnUdemyAnchor>
-            </TeachOnUdemy>
-            {dropDownToShow === index ? (
-              <Dropdown>{<link.dropdown />}</Dropdown>
-            ) : null}
-          </div>
-        ))}
+        {headerLinks.map((link, index) => {
+          // Declare dropdown style object outside of return statement
+          const dropdownStyle: React.CSSProperties = {
+            position: "absolute",
+            right: index === 0 ? "438px" : index === 1 ? "312px" : "212px",
+          };
+
+          return (
+            <div key={index}>
+              <TeachOnUdemy
+                onMouseEnter={() => toggleDropDown(index)}
+                onMouseLeave={() => toggleDropDown(null)}
+              >
+                <TeachOnUdemyAnchor>
+                  <HeaderSpan
+                    sx={{
+                      ":hover": {
+                        color: "#5623D0",
+                      },
+                    }}
+                  >
+                    {link.title}
+                  </HeaderSpan>
+                </TeachOnUdemyAnchor>
+              </TeachOnUdemy>
+
+              {dropDownToShow === index ? (
+                <Dropdown style={dropdownStyle}>{<link.dropdown />}</Dropdown>
+              ) : null}
+            </div>
+          );
+        })}
 
         {headerIcons.map((icon, index) => (
           <div key={index}>

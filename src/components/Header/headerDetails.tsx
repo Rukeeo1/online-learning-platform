@@ -1,4 +1,3 @@
-import * as React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
@@ -15,6 +14,7 @@ export const headerLinks = [
       />
     ),
   },
+
   {
     title: "Teach on Udemy",
     dropdown: () => (
