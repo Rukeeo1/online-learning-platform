@@ -33,6 +33,7 @@ interface HeaderLink {
 }
 
 interface HeaderIcon {
+  iconDropdown: React.FunctionComponent<any>;
   linkIcon: React.FunctionComponent<any>;
 }
 
@@ -42,13 +43,21 @@ interface headerProps {
 }
 
 export const Header: React.FunctionComponent<headerProps> = (props) => {
+  const { headerLinks, headerIcons } = props;
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
 
-  const { headerLinks, headerIcons } = props;
+  const [iconDropDownToShow, setIconDropDownToShow] = React.useState<
+    number | null
+  >(null);
+
+  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
+
+  const toggleIconDropDown = (value: number | null) =>
+    setIconDropDownToShow(value);
 
   return (
     <StyledHeader>
@@ -71,7 +80,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
 
         <HeaderFormField>
           <Form>
-            <FormInputField placeholder="Search for anything"></FormInputField>
+            <FormInputField placeholder="Search for anything" />
 
             <InputSearchButton>
               <SearchIcon style={{ color: "#1c1d1f" }} />
@@ -82,7 +91,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
           // Declare dropdown style object outside of return statement
           const dropdownStyle: React.CSSProperties = {
             position: "absolute",
-            right: index === 0 ? "438px" : index === 1 ? "312px" : "212px",
+            right: index === 0 ? "438px" : index === 1 ? "312px" : "214px",
           };
 
           const buttonStyle: React.CSSProperties = {
@@ -94,8 +103,18 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
           return (
             <div key={index}>
               <TeachOnUdemy
-                onMouseEnter={() => toggleDropDown(index)}
-                onMouseLeave={() => toggleDropDown(null)}
+                onMouseEnter={() => {
+                  toggleDropDown(index);
+                  setHoveredIndex(index);
+                }}
+                onMouseLeave={() => {
+                  setHoveredIndex(null);
+                  setTimeout(() => {
+                    if (hoveredIndex === index) {
+                      toggleDropDown(null);
+                    }
+                  }, 5000);
+                }}
               >
                 <TeachOnUdemyAnchor>
                   <HeaderSpan
@@ -119,13 +138,30 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
           );
         })}
 
-        {headerIcons.map((icon, index) => (
-          <div key={index}>
-            <CartContent>
-              <CartAnchor>{<icon.linkIcon />}</CartAnchor>
-            </CartContent>
-          </div>
-        ))}
+        {headerIcons.map((icon, index) => {
+          // Declare dropdown style object outside of return statement
+          const dropdownStyle: React.CSSProperties = {
+            position: "absolute",
+            right: index === 0 ? "172px" : index === 1 ? "122px" : "72px",
+          };
+
+          return (
+            <div key={index}>
+              <CartContent
+                onMouseEnter={() => toggleIconDropDown(index)}
+                onMouseLeave={() => toggleIconDropDown(null)}
+              >
+                <CartAnchor>{<icon.linkIcon />}</CartAnchor>
+              </CartContent>
+
+              {iconDropDownToShow === index ? (
+                <Dropdown style={dropdownStyle}>
+                  {<icon.iconDropdown />}
+                </Dropdown>
+              ) : null}
+            </div>
+          );
+        })}
 
         <HeaderUserAvatar>
           <HeaderUser>WO</HeaderUser>

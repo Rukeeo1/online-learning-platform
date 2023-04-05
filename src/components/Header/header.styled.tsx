@@ -460,10 +460,35 @@ export const HeaderMenuButton = styled("a")({
   padding: "0 12px",
   justifyContent: "center",
   height: "48px",
-  // color: "#fff",
-  // backgroundColor: "#1c1d1f",
   whiteSpace: "nowrap",
   width: "100%",
+});
+
+export const IconMenuTitle = styled("a")({
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#6a6f73",
+  marginBottom: "16px",
+});
+
+export const IconMenuButton = styled("div")({
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  color: "#5624d0",
+  textDecoration: "none",
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "14px",
 });
 
 /* Proifile Modal */

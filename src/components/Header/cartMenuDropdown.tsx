@@ -5,22 +5,19 @@ import {
   HeaderPopover,
   HeaderMenu,
   HeaderMenuContent,
-  HeaderMenuTitle,
-  HeaderMenuButton,
+  IconMenuTitle,
+  IconMenuButton,
 } from "./header.styled";
 
 interface componentProps {
   title1: string;
   title2: string;
-  title3: string;
-  buttonTitle: string;
-  buttonStyle: React.CSSProperties; // Add buttonStyle prop
 }
 
-export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
+export const CartMenuDropdown: React.FunctionComponent<componentProps> = (
   props
 ) => {
-  const { title1, title2, title3, buttonTitle, buttonStyle } = props;
+  const { title1, title2 } = props;
 
   return (
     <HeaderDropdown>
@@ -28,15 +25,13 @@ export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
         <HeaderPopover>
           <HeaderMenu>
             <HeaderMenuContent>
-              <HeaderMenuTitle>
+              <IconMenuTitle>
                 <span>{title1}</span>
-                <span>{title2}</span>
-                <span>{title3}</span>
-              </HeaderMenuTitle>
+              </IconMenuTitle>
 
-              <HeaderMenuButton style={buttonStyle}>
-                <span>{buttonTitle}</span>
-              </HeaderMenuButton>
+              <IconMenuButton>
+                <span>{title2}</span>
+              </IconMenuButton>
             </HeaderMenuContent>
           </HeaderMenu>
         </HeaderPopover>
