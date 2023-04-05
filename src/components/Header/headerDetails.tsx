@@ -6,38 +6,53 @@ import { HeaderMenuDropdown } from "./headerDropdown";
 export const headerLinks = [
   {
     title: "Udemy Business",
-
-    dropdown: () => (
+    style: {
+      color: "#fff",
+      backgroundColor: "#1c1d1f",
+      border: "0px",
+    },
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere."
         buttonTitle="Try Udemy Business"
+        buttonStyle={buttonStyle}
       />
     ),
   },
 
   {
     title: "Teach on Udemy",
-
-    dropdown: () => (
+    style: {
+      color: "#fff",
+      backgroundColor: "#1c1d1f",
+      border: "0px",
+    },
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Turn what you know into an"
         title2="opportunity and reach"
         title3="millions around the world."
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "My learning",
-    buttonTitle: "Learn more",
-    dropdown: () => (
+    style: {
+      color: "#1c1d1f",
+      backgroundColor: "white",
+      border: "2px solid #1c1d1f",
+    },
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Start learning from over"
         title2="213,000 courses today."
         title3=""
         buttonTitle="Browse now"
+        buttonStyle={buttonStyle}
       />
     ),
   },
@@ -85,111 +100,121 @@ export const headerIcons = [
 export const navLinks = [
   {
     title: "Development",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Business",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Finance & Accounting",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "IT & Software",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Office Productivity",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Personal Development",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Design",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Marketing",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Health & Fitness",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },
   {
     title: "Music",
-    dropdown: () => (
+    dropdown: (index: number, buttonStyle: React.CSSProperties) => (
       <HeaderMenuDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
         buttonTitle="Learn more"
+        buttonStyle={buttonStyle}
       />
     ),
   },

@@ -14,12 +14,13 @@ interface componentProps {
   title2: string;
   title3: string;
   buttonTitle: string;
+  buttonStyle: React.CSSProperties; // Add buttonStyle prop
 }
 
 export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
   props
 ) => {
-  const { title1, title2, title3, buttonTitle } = props;
+  const { title1, title2, title3, buttonTitle, buttonStyle } = props;
 
   return (
     <HeaderDropdown>
@@ -33,7 +34,7 @@ export const HeaderMenuDropdown: React.FunctionComponent<componentProps> = (
                 <span>{title3}</span>
               </HeaderMenuTitle>
 
-              <HeaderMenuButton>
+              <HeaderMenuButton style={buttonStyle}>
                 <span>{buttonTitle}</span>
               </HeaderMenuButton>
             </HeaderMenuContent>

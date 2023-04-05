@@ -27,6 +27,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 
 interface HeaderLink {
+  style: any;
   title: string;
   dropdown: React.FunctionComponent<any>;
 }
@@ -84,6 +85,12 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
             right: index === 0 ? "438px" : index === 1 ? "312px" : "212px",
           };
 
+          const buttonStyle: React.CSSProperties = {
+            color: headerLinks[index].style.color,
+            border: headerLinks[index].style.border,
+            backgroundColor: headerLinks[index].style.backgroundColor,
+          };
+
           return (
             <div key={index}>
               <TeachOnUdemy
@@ -104,7 +111,9 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               </TeachOnUdemy>
 
               {dropDownToShow === index ? (
-                <Dropdown style={dropdownStyle}>{<link.dropdown />}</Dropdown>
+                <Dropdown style={dropdownStyle}>
+                  {headerLinks[index].dropdown(index, buttonStyle)}
+                </Dropdown>
               ) : null}
             </div>
           );

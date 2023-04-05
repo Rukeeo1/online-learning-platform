@@ -348,6 +348,13 @@ export const HeaderUser = styled("div")({
 });
 
 /* Header Dropdown  */
+export const Dropdown = styled("div")<{ show?: boolean }>({
+  position: "absolute",
+  top: "73px",
+  background: "0 0",
+  minWidth: "288px",
+});
+
 export const HeaderDropdown = styled("div")({
   color: "#1c1d1f",
   fontFamily:
@@ -419,6 +426,7 @@ export const HeaderMenuContent = styled("div")({
   margin: 0,
   padding: "16px",
   textAlign: "center",
+  width: "100%",
 });
 
 export const HeaderMenuTitle = styled("div")({
@@ -452,8 +460,8 @@ export const HeaderMenuButton = styled("a")({
   padding: "0 12px",
   justifyContent: "center",
   height: "48px",
-  color: "#fff",
-  backgroundColor: "#1c1d1f",
+  // color: "#fff",
+  // backgroundColor: "#1c1d1f",
   whiteSpace: "nowrap",
   width: "100%",
 });
@@ -809,11 +817,4 @@ export const LinkBarText = styled("span")({
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "14px",
-});
-
-export const Dropdown = styled("div")<{ show?: boolean }>({
-  position: "absolute",
-  top: "73px",
-  background: "0 0",
-  minWidth: "288px",
 });
