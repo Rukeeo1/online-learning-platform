@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import { Header } from "./components/Header/header";
 import { HomePage } from "./components/Home/HomePage";
 import { CourseData } from "./components/Home/CourseData";
-import { CourseReview } from "./components/Home/CourseReview";
+// import { CourseReview } from "./components/Home/CourseReview";
 
 // import './App.css'
 
