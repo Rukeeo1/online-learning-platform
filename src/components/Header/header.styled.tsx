@@ -34,6 +34,11 @@ export const HeaderContent = styled("div")({
   width: "100%",
   alignItems: "center",
   display: "flex",
+
+  // Media query
+  "@media (max-width: 600px)": {
+    display: "none",
+  },
 });
 
 export const Logo = styled("img")({
