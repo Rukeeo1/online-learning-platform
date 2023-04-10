@@ -11,12 +11,12 @@ type image = {
   content?: string;
 };
 
-interface homeProps {
+interface HomeProps {
   images: image[];
   currentBillboard: number;
 }
 
-export const BillboardCarousel: React.FunctionComponent<homeProps> = (
+export const BillboardCarousel: React.FunctionComponent<HomeProps> = (
   props
 ) => {
   const { images, currentBillboard } = props;

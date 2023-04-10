@@ -26,33 +26,32 @@ import starfilled from "../../assets/svgs/star-filled-rate.svg";
 import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
 import starhalf from "../../assets/svgs/star-half-rate.svg";
 
-interface CourseUnitCard {
-  course: {
-    img: string;
-    title: string;
-    instructor: string;
-    rate: string;
-    rateNum: string;
-    currentPrice: string;
-    originalPrice: string;
-    bestSeller: string;
-    starfilled: string;
-    starhalf: boolean;
-    staroutline: boolean;
-    reviewModal: React.FC;
-  };
-  toggleReviewModal: any;
-  index: any;
-  showReviewModal: any;
+type CourseDetails = {
+  img: string;
+  title: string;
+  instructor: string;
+  rate: string;
+  rateNum: string;
+  currentPrice: string;
+  originalPrice: string;
+  bestSeller: string;
+  starfilled: boolean;
+  starhalf: boolean;
+  staroutline: boolean;
+  reviewModal: () => JSX.Element;
+};
+
+interface CourseUnitProps {
+  course: CourseDetails;
 }
 
-export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
+export const CourseUnitCard: React.FunctionComponent<CourseUnitProps> = (
   props
 ) => {
-  const { course, toggleReviewModal, index, showReviewModal } = props;
+  const { course } = props;
 
   return (
-    <>
+    <div>
       <CourseCarouselScrollItem>
         <ScrollItemContainer>
           <CourseCardImageContainer>
@@ -196,6 +195,6 @@ export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
           </CourseCardMainContent>
         </ScrollItemContainer>
       </CourseCarouselScrollItem>
-    </>
+    </div>
   );
 };

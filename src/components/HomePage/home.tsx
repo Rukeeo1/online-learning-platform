@@ -2,11 +2,10 @@ import * as React from "react";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Typography } from "@mui/material";
-import { BillboardCarousel } from "./BillboardCarousel";
+import { BillboardCarousel } from "./billboardCarousel";
 import firstBillboard from "/src/assets/images/first-billboard-banner.jpg";
 import secondBillboard from "/src/assets/images/second-billboard-banner.jpg";
-import { CourseUnitCard } from "./courseCard";
- import {
+import {
   AppHomeDataContent,
   AppHomePageWrapper,
   BillBoardBannerContainer,
@@ -27,21 +26,33 @@ import { CourseUnitCard } from "./courseCard";
   ViewedCourseTitle,
   ViewedCoursesSection,
 } from "./home.styled";
+import { CourseUnitCard } from "./courseCard";
+
+interface CourseDetail {
+  img: string;
+  title: string;
+  instructor: string;
+  rate: string;
+  rateNum: string;
+  currentPrice: string;
+  originalPrice: string;
+  bestSeller: string;
+  starfilled: boolean;
+  starhalf: boolean;
+  staroutline: boolean;
+  reviewModal: () => JSX.Element;
+}
 
 interface HomeProps {
-  courses: any[];
+  courses: CourseDetail[];
 }
 
 export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   const [currentBillboard, setCurrentBillboard] = React.useState(0);
 
-  const [showReviewModal, setShowReviewModal] = React.useState<number | null>(
-    null
-  );
-
-  const toggleReviewModal = (value: number) => setShowReviewModal(value);
-
   const { courses } = props;
+
+  console.log(courses, "course defined");
 
   const images = [
     {
@@ -145,12 +156,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                 <CourseUnitGridCarousel>
                   {courses.slice(0, 12).map((course, index) => (
                     <div key={index}>
-                      <CourseUnitCard
-                        course={course}
-                        index={index}
-                        showReviewModal={showReviewModal}
-                        toggleReviewModal={toggleReviewModal}
-                      />
+                      <CourseUnitCard course={course} />
                     </div>
                   ))}
                 </CourseUnitGridCarousel>
