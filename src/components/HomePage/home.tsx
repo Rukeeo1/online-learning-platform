@@ -52,8 +52,6 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
 
   const { courses } = props;
 
-  console.log(courses, "course defined");
-
   const images = [
     {
       title: "Unlock the power of your people",
