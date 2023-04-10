@@ -2,8 +2,17 @@ import * as React from "react";
 import { BillboardContentBox, CarouselInner } from "./home.styled";
 import { Typography } from "@mui/material";
 
+type image = {
+  title: string;
+  subtitle?: string;
+  anchorText?: string;
+  dot?: string;
+  img: string;
+  content?: string;
+};
+
 interface homeProps {
-  images: any[];
+  images: image[];
   currentBillboard: number;
 }
 
@@ -14,7 +23,7 @@ export const BillboardCarousel: React.FunctionComponent<homeProps> = (
 
   return (
     <>
-      {images.map((image: any[], index: number) => (
+      {images.map((image, index) => (
         <CarouselInner key={index}>
           <img
             width="1340"
