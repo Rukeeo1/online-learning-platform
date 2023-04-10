@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BillboardContentBox, CarouselInner } from "./HomePage.styled";
+import { BillboardContentBox, CarouselInner } from "./home.styled";
 import { Typography } from "@mui/material";
 
 interface homeProps {

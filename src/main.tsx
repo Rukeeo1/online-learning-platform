@@ -39,10 +39,16 @@ const theme = createTheme({
     },
 
     h2: {
-      fontSize: "32px",
+      color: "#1c1d1f",
+      margin: 0,
+      padding: 0,
+      maxWidth: "600px",
+      marginBottom: "24px",
+      fontFamily: "'Arcuata Trial'",
       fontWeight: 700,
-      fontFamily:
-        "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      fontSize: "32px",
+      lineHeight: 1.25,
+      letterSpacing: "-.05rem",
     },
 
     subtitle1: {

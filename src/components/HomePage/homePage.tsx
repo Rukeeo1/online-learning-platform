@@ -1,33 +1,32 @@
 import * as React from "react";
-import {
-  TopBillBoardCarousel,
-  TopCarouselItems,
-  CourseUnitGridCarousel,
-  CourseCarouselBackButton,
-  CourseCarouselForwardButton,
-  CourseDiscoveryContainer,
-  TopHomePageBillboardCarousel,
-  AppHomeDataContent,
-  CourseViewAnchorTag,
-  CourseViewedTitle,
-  CourseCarouselContainer,
-  AppHomePageWrapper,
-  BillBoardBannerContainer,
-  BillboardBackButton,
-  BillboardForwardButton,
-  RecommendedCourseContainer,
-  ViewedCourseContainer,
-  ViewedCourseHeader,
-  ViewedUnitCourseDetails,
-  ReviewModal,
-} from "./HomePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./BillboardCarousel";
 import firstBillboard from "/src/assets/images/first-billboard-banner.jpg";
 import secondBillboard from "/src/assets/images/second-billboard-banner.jpg";
-import { CourseUnitCard } from "./CourseCard";
+import { CourseUnitCard } from "./courseCard";
+ import {
+  AppHomeDataContent,
+  AppHomePageWrapper,
+  BillBoardBannerContainer,
+  BillboardBackButton,
+  BillboardForwardButton,
+  CourseCarouselBackButton,
+  CourseCarouselContainer,
+  CourseCarouselForwardButton,
+  CourseDiscoveryContainer,
+  CourseUnitGridCarousel,
+  CourseViewAnchorTag,
+  RecommendedCourseContainer,
+  TopBillBoardCarousel,
+  TopCarouselItem,
+  TopCarouselSection,
+  ViewedCourseContainer,
+  ViewedCourseHeader,
+  ViewedCourseTitle,
+  ViewedCoursesSection,
+} from "./home.styled";
 
 interface HomeProps {
   courses: any[];
@@ -87,9 +86,9 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   return (
     <AppHomePageWrapper>
       <AppHomeDataContent>
-        <TopHomePageBillboardCarousel>
+        <TopCarouselSection>
           <TopBillBoardCarousel>
-            <TopCarouselItems>
+            <TopCarouselItem>
               <BillBoardBannerContainer>
                 <BillboardCarousel
                   images={images}
@@ -104,9 +103,9 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                   <ArrowForwardIosOutlinedIcon />
                 </BillboardForwardButton>
               </BillBoardBannerContainer>
-            </TopCarouselItems>
+            </TopCarouselItem>
           </TopBillBoardCarousel>
-        </TopHomePageBillboardCarousel>
+        </TopCarouselSection>
 
         <CourseDiscoveryContainer>
           <Typography
@@ -122,9 +121,9 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
           </Typography>
 
           <ViewedCourseContainer>
-            <ViewedUnitCourseDetails>
+            <ViewedCoursesSection>
               <ViewedCourseHeader>
-                <CourseViewedTitle>
+                <ViewedCourseTitle>
                   <div>
                     Because you viewed{" "}
                     <CourseViewAnchorTag
@@ -139,7 +138,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                       Firebase"
                     </CourseViewAnchorTag>
                   </div>
-                </CourseViewedTitle>
+                </ViewedCourseTitle>
               </ViewedCourseHeader>
 
               <CourseCarouselContainer>
@@ -164,13 +163,15 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                   <ArrowForwardIosOutlinedIcon />
                 </CourseCarouselForwardButton>
               </CourseCarouselContainer>
-            </ViewedUnitCourseDetails>
+            </ViewedCoursesSection>
           </ViewedCourseContainer>
 
+          {/* Recommended Section */}
+
           <RecommendedCourseContainer>
-            <ViewedUnitCourseDetails>
+            <ViewedCoursesSection>
               <ViewedCourseHeader>
-                <CourseViewedTitle>Recommended for you</CourseViewedTitle>
+                <ViewedCourseTitle>Recommended for you</ViewedCourseTitle>
               </ViewedCourseHeader>
 
               <CourseCarouselContainer>
@@ -191,7 +192,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                   <ArrowForwardIosOutlinedIcon />
                 </CourseCarouselForwardButton>
               </CourseCarouselContainer>
-            </ViewedUnitCourseDetails>
+            </ViewedCoursesSection>
           </RecommendedCourseContainer>
         </CourseDiscoveryContainer>
       </AppHomeDataContent>

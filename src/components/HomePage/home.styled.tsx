@@ -29,7 +29,7 @@ export const AppHomeDataContent = styled("main")({
   padding: 0,
 });
 
-export const TopHomePageBillboardCarousel = styled("div")({
+export const TopCarouselSection = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -60,7 +60,7 @@ export const TopBillBoardCarousel = styled("div")({
   position: "relative",
 });
 
-export const TopCarouselItems = styled("div")({
+export const TopCarouselItem = styled("div")({
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
@@ -189,24 +189,6 @@ export const CourseDiscoveryContainer = styled("div")({
   cursor: "pointer",
 });
 
-export const CourseCardHeaderTitle = styled("h2")({
-  display: "flex",
-  alignItems: "center",
-  color: "#1c1d1f",
-  margin: 0,
-  padding: 0,
-  //   maxWidth: "600px",
-  width: "600px",
-  height: 40,
-  marginBottom: "24px",
-  fontFamily:
-    "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
-  fontWeight: 700,
-  fontSize: "32px",
-  lineHeight: 1.25,
-  letterSpacing: "0.5px",
-});
-
 export const ViewedCourseContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
@@ -221,7 +203,7 @@ export const ViewedCourseContainer = styled("div")({
   width: "100%",
 });
 
-export const ViewedUnitCourseDetails = styled("div")({
+export const ViewedCoursesSection = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -237,8 +219,8 @@ export const ViewedUnitCourseDetails = styled("div")({
 
 export const ViewedCourseHeader = styled("div")({
   display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-start",
+  justifyContent: "space-between",
+  alignItems: "baseline",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
@@ -249,7 +231,7 @@ export const ViewedCourseHeader = styled("div")({
   width: "100%",
 });
 
-export const CourseViewedTitle = styled("h2")({
+export const ViewedCourseTitle = styled("h2")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
@@ -297,17 +279,24 @@ export const CourseCarouselContainer = styled("div")({
 });
 
 export const CourseUnitGridCarousel = styled("div")({
-  display: "grid",
-  gridAutoFlow: "column",
-  gridGap: "16px",
-  gridAutoColumns: "calc((100% - (5 - 1) * 16px)/5)",
+  display: "flex",
+  flexDirection: "row",
+  gap: "16px",
+  flexWrap: "nowrap",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "100%",
+
+  // display: "grid",
+  // gridAutoFlow: "column",
+  // gridGap: "16px",
+  // gridAutoColumns: "calc((100% - (5 - 1) * 16px)/5)",
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 400,
   lineHeight: 1.4,
   fontSize: "16px",
   color: "#1c1d1f",
-  width: "100%",
   margin: 0,
   padding: 0,
   overflow: "auto",
@@ -316,7 +305,6 @@ export const CourseUnitGridCarousel = styled("div")({
   scrollSnapStop: "always",
   touchAction: "manipulation",
   overflowX: "hidden",
-  // position: "relative",
 });
 
 export const CourseCarouselBackButton = styled("button")({
@@ -407,7 +395,6 @@ export const ScrollItemContainer = styled("div")({
   position: "relative",
   maxWidth: "375px",
   minWidth: "173px",
-
 });
 
 export const CourseCardImageContainer = styled("div")({

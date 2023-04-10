@@ -20,7 +20,7 @@ import {
   RateNumContent,
   CourseCardRateNum,
   ReviewModal,
-} from "./HomePage.styled";
+} from "./home.styled";
 import { Typography } from "@mui/material";
 import starfilled from "../../assets/svgs/star-filled-rate.svg";
 import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
@@ -42,7 +42,6 @@ interface CourseUnitCard {
     reviewModal: React.FC;
   };
   toggleReviewModal: any;
-
   index: any;
   showReviewModal: any;
 }
@@ -54,10 +53,7 @@ export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
 
   return (
     <>
-      <CourseCarouselScrollItem
-        onMouseEnter={() => toggleReviewModal(index)}
-        onMouseLeave={() => toggleReviewModal(null)}
-      >
+      <CourseCarouselScrollItem>
         <ScrollItemContainer>
           <CourseCardImageContainer>
             <CourseCardImage src={course.img} alt="Course Card Image" />
@@ -199,10 +195,6 @@ export const CourseUnitCard: React.FunctionComponent<CourseUnitCard> = (
             ) : null}
           </CourseCardMainContent>
         </ScrollItemContainer>
-
-        {showReviewModal === index ? (
-          <ReviewModal>{<course.reviewModal />}</ReviewModal>
-        ) : null}
       </CourseCarouselScrollItem>
     </>
   );
