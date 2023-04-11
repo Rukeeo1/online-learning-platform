@@ -71,26 +71,22 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   ];
 
   const handlePrev = () => {
-    const index =
-      currentBillboard > 0 ? currentBillboard - 1 : images.length - 1;
-    setCurrentBillboard(index);
+    setCurrentBillboard((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    const index =
-      currentBillboard < images.length - 1 ? currentBillboard + 1 : 0;
-    setCurrentBillboard(index);
+    setCurrentBillboard((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   React.useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentBillboard((currentBillboard: number) =>
-        currentBillboard < images.length - 1 ? currentBillboard + 1 : 0
+    const interval = setInterval(() => {
+      setCurrentBillboard((prev) =>
+        prev === images.length - 1 ? 0 : prev + 1
       );
-    }, 6000);
+    }, 5000);
 
-    return () => clearInterval(slideInterval);
-  }, []);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <AppHomePageWrapper>

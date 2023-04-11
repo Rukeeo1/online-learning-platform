@@ -88,12 +88,15 @@ export const BillBoardBannerContainer = styled("div")({
   width: "100%",
   maxWidth: "1340px",
   marginBottom: "48px",
+  opacity: 1,
+  transition: "opacity 0.5s ease-in-out",
 });
 
 /* Carousel Inner */
-export const CarouselInner = styled("div")({
+export const CarouselItem = styled("div")({
   display: "flex",
-  transition: "ease 1s",
+  width: "100%",
+  transition: "transform 0.3s ease-in-out",
 });
 
 export const BillboardContentBox = styled("div")({

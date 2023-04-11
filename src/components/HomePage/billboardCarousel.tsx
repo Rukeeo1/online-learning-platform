@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BillboardContentBox, CarouselInner } from "./home.styled";
+import { BillboardContentBox, CarouselItem } from "./home.styled";
 import { Typography } from "@mui/material";
 
 type image = {
@@ -24,7 +24,7 @@ export const BillboardCarousel: React.FunctionComponent<HomeProps> = (
   return (
     <>
       {images.map((image, index) => (
-        <CarouselInner key={index}>
+        <CarouselItem key={index}>
           <img
             width="1340"
             height="400"
@@ -56,7 +56,7 @@ export const BillboardCarousel: React.FunctionComponent<HomeProps> = (
               {images[currentBillboard].content}
             </Typography>
           </BillboardContentBox>
-        </CarouselInner>
+        </CarouselItem>
       ))}
     </>
   );
