@@ -28,7 +28,7 @@ import {
 } from "./home.styled";
 import { CourseUnitCard } from "./courseCard";
 
-interface CourseDetail {
+interface CourseInformation {
   img: string;
   title: string;
   instructor: string;
@@ -44,7 +44,7 @@ interface CourseDetail {
 }
 
 interface HomeProps {
-  courses: CourseDetail[];
+  courses: CourseInformation[];
 }
 
 export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
