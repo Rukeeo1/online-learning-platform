@@ -1,17 +1,15 @@
 import * as React from "react";
 import {
   Logo,
-  ContentHeader,
+  HeaderContent,
   Nav,
   StyledHeader,
   CategoryButton,
-  Paragraph,
+  HeaderSpan,
   HeaderFormField,
   Form,
   FormInputField,
   InputSearchButton,
-  UdemyBusiness,
-  UdemyBusinessAnchor,
   TeachOnUdemy,
   TeachOnUdemyAnchor,
   CartContent,
@@ -20,23 +18,55 @@ import {
   HeaderButtonAchor,
   HeaderGlobeButton,
   HeaderGlobeAchor,
+  HeaderUserAvatar,
+  HeaderUser,
+  Dropdown,
 } from "./header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 
-interface headerProps {}
+interface HeaderLink {
+  style: any;
+  title: string;
+  dropdown: React.FunctionComponent<any>;
+}
+
+interface HeaderIcon {
+  iconDropdown: React.FunctionComponent<any>;
+  linkIcon: React.FunctionComponent<any>;
+}
+
+interface headerProps {
+  headerLinks: HeaderLink[];
+  headerIcons: HeaderIcon[];
+}
 
 export const Header: React.FunctionComponent<headerProps> = (props) => {
+  const { headerLinks, headerIcons } = props;
+  const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
+    null
+  );
+
+  const [iconDropDownToShow, setIconDropDownToShow] = React.useState<
+    number | null
+  >(null);
+
+  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
+
+  const toggleDropDown = (value: number | null) => setDropDownToShow(value);
+
+  const toggleIconDropDown = (value: number | null) =>
+    setIconDropDownToShow(value);
+
   return (
     <StyledHeader>
-      <ContentHeader>
+      <HeaderContent>
         <Logo src={UdemyLogo} alt="" />
 
         <Nav>
           <CategoryButton>
-            <Paragraph
+            <HeaderSpan
               sx={{
                 ":hover": {
                   color: "#5623D0",
@@ -44,109 +74,99 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               }}
             >
               Categories
-            </Paragraph>
+            </HeaderSpan>
           </CategoryButton>
         </Nav>
 
         <HeaderFormField>
           <Form>
-            <FormInputField placeholder="Search for anything"></FormInputField>
+            <FormInputField placeholder="Search for anything" />
 
             <InputSearchButton>
               <SearchIcon style={{ color: "#1c1d1f" }} />
             </InputSearchButton>
           </Form>
         </HeaderFormField>
+        {headerLinks.map((link, index) => {
+          // Declare dropdown style object outside of return statement
+          const dropdownStyle: React.CSSProperties = {
+            position: "absolute",
+            right: index === 0 ? "438px" : index === 1 ? "312px" : "214px",
+          };
 
-        <UdemyBusiness>
-          <UdemyBusinessAnchor>
-            <Paragraph
-              sx={{
-                ":hover": {
-                  color: "#5623D0",
-                },
-              }}
-            >
-              Udemy Business
-            </Paragraph>
-          </UdemyBusinessAnchor>
-        </UdemyBusiness>
+          const buttonStyle: React.CSSProperties = {
+            color: headerLinks[index].style.color,
+            border: headerLinks[index].style.border,
+            backgroundColor: headerLinks[index].style.backgroundColor,
+          };
 
-        <TeachOnUdemy>
-          <TeachOnUdemyAnchor>
-            <Paragraph
-              sx={{
-                ":hover": {
-                  color: "#5623D0",
-                },
-              }}
-            >
-              Teach on Udemy
-            </Paragraph>
-          </TeachOnUdemyAnchor>
-        </TeachOnUdemy>
+          return (
+            <div key={index}>
+              <TeachOnUdemy
+                onMouseEnter={() => {
+                  toggleDropDown(index);
+                  setHoveredIndex(index);
+                }}
+                onMouseLeave={() => {
+                  setHoveredIndex(null);
+                  setTimeout(() => {
+                    if (hoveredIndex === index) {
+                      toggleDropDown(null);
+                    }
+                  }, 5000);
+                }}
+              >
+                <TeachOnUdemyAnchor>
+                  <HeaderSpan
+                    sx={{
+                      ":hover": {
+                        color: "#5623D0",
+                      },
+                    }}
+                  >
+                    {link.title}
+                  </HeaderSpan>
+                </TeachOnUdemyAnchor>
+              </TeachOnUdemy>
 
-        <CartContent>
-          <CartAnchor>
-            <ShoppingCartOutlinedIcon
-              sx={{
-                color: "#1c1d1f",
-                ":hover": {
-                  color: "#5623D0",
-                },
-              }}
-            />
-          </CartAnchor>
-        </CartContent>
+              {dropDownToShow === index ? (
+                <Dropdown style={dropdownStyle}>
+                  {headerLinks[index].dropdown(index, buttonStyle)}
+                </Dropdown>
+              ) : null}
+            </div>
+          );
+        })}
 
-        <HeaderButton>
-          <HeaderButtonAchor
-            sx={{
-              ":hover": {
-                backgroundColor: "#F5F5F5",
-              },
-            }}
-          >
-            <Paragraph
-              sx={{
-                color: "#1c1d1f",
-                fontWeight: 700,
-              }}
-            >
-              Log in
-            </Paragraph>
-          </HeaderButtonAchor>
-        </HeaderButton>
+        {headerIcons.map((icon, index) => {
+          // Declare dropdown style object outside of return statement
+          const dropdownStyle: React.CSSProperties = {
+            position: "absolute",
+            right: index === 0 ? "172px" : index === 1 ? "122px" : "72px",
+          };
 
-        <HeaderButton>
-          <HeaderButtonAchor
-            sx={{
-              backgroundColor: "#1c1d1f",
-            }}
-          >
-            <Paragraph
-              sx={{
-                color: "#FFFFFF",
-                fontWeight: 700,
-              }}
-            >
-              Sign up
-            </Paragraph>
-          </HeaderButtonAchor>
-        </HeaderButton>
+          return (
+            <div key={index}>
+              <CartContent
+                onMouseEnter={() => toggleIconDropDown(index)}
+                onMouseLeave={() => toggleIconDropDown(null)}
+              >
+                <CartAnchor>{<icon.linkIcon />}</CartAnchor>
+              </CartContent>
 
-        <HeaderGlobeButton>
-          <HeaderGlobeAchor
-            sx={{
-              ":hover": {
-                backgroundColor: "#F5F5F5",
-              },
-            }}
-          >
-            <LanguageOutlinedIcon />
-          </HeaderGlobeAchor>
-        </HeaderGlobeButton>
-      </ContentHeader>
+              {iconDropDownToShow === index ? (
+                <Dropdown style={dropdownStyle}>
+                  {<icon.iconDropdown />}
+                </Dropdown>
+              ) : null}
+            </div>
+          );
+        })}
+
+        <HeaderUserAvatar>
+          <HeaderUser>WO</HeaderUser>
+        </HeaderUserAvatar>
+      </HeaderContent>
     </StyledHeader>
   );
 };

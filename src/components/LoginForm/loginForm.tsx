@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import * as React from "react";
-import Svgs from "../../assets/svgs";
+import { Svgs } from "../../assets/svgs";
 import "./loginForm.css";
 import {
   AccountSignUp,

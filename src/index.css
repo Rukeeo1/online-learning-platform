@@ -24,14 +24,13 @@
 body {
   width: 100%;
   min-height: 100vh;
-  overflow: auto;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.ud-icon{
+.ud-icon {
   width: 200px;
-  color:blue
+  color: blue;
 }
