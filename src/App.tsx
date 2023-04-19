@@ -10,8 +10,8 @@ import {
   headerIcons,
   headerLinks,
   navLinks,
-} from "./components/Header/NavDetails";
-import { Header } from "./components/Header/NavBar";
+} from "./components/Header/HeaderDetails";
+import { Header } from "./components/Header/Header";
 
 function App() {
   return (

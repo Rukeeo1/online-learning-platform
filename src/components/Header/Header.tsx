@@ -21,7 +21,7 @@ import {
   HeaderUserAvatar,
   HeaderUser,
   Dropdown,
-} from "./Nav.styled";
+} from "./Header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";

@@ -7,7 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuTitle,
   DropdownMenuButton,
-} from "./Nav.styled";
+} from "./Header.styled";
 
 interface componentProps {
   title1: string;

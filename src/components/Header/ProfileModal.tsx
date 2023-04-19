@@ -18,7 +18,7 @@ import {
   UserEmail,
   UserHeading,
   UserProfileAnchorTag,
-} from "./Nav.styled";
+} from "./Header.styled";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 

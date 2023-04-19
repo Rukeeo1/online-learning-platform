@@ -7,7 +7,7 @@ import {
   LinkBarNavButton,
   LinkBarText,
   Dropdown,
-} from "./Nav.styled";
+} from "./Header.styled";
 
 type NavLinkMenu = {
   title: string;
