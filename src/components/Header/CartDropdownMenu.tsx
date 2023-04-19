@@ -7,7 +7,7 @@ import {
   DropdownMenuContent,
   IconMenuTitle,
   IconMenuButton,
-} from "./Header.styled";
+} from "./Nav.styled";
 
 interface CartDropdownMenuProps {
   title1: string;

@@ -7,10 +7,18 @@ import {
   LinkBarNavButton,
   LinkBarText,
   Dropdown,
-} from "./Header.styled";
+} from "./Nav.styled";
+
+type NavLinkMenu = {
+  title: string;
+  dropdown: (
+    index: number,
+    buttonStyle: React.CSSProperties
+  ) => React.ReactNode | null; // return type includes null
+};
 
 interface NavLinkMenuProps {
-  navLinks: any[];
+  navLinks: NavLinkMenu[];
 }
 
 export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
@@ -40,7 +48,9 @@ export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
             </LinkBarListWrapper>
 
             {dropDownToShow === index ? (
-              <Dropdown>{<navLink.dropdown />}</Dropdown>
+              <Dropdown>
+                {navLink.dropdown(index, {} as React.CSSProperties)}
+              </Dropdown>
             ) : null}
           </div>
         ))}
