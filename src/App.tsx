@@ -2,8 +2,8 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Login from "./components/Login";
 import { Header } from "./components/Header/header";
-import { HomePage } from "./components/HomePage/Home";
-import { CourseDetails } from "./components/HomePage/CourseDetails";
+import { HomePage } from "./components/Home/Home";
+import { CourseDetails } from "./components/Home/CourseDetails";
 // import { CourseReview } from "./components/Home/CourseReview";
 // import './App.css'
 
