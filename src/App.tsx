@@ -11,12 +11,14 @@ import {
   headerLinks,
   navLinks,
 } from "./components/Header/headerDetails";
+import HeaderAlternate from "./components/Header/HeaderAlternate";
 
 function App() {
   return (
     <div className="App">
       <Header headerLinks={headerLinks} headerIcons={headerIcons} />
       <NavLinkBar navLinks={navLinks} />
+      <HeaderAlternate  />
       {/* <HomePage /> */}
       {/* <LoginForm /> */}
       {/* <ProfileModal /> */}

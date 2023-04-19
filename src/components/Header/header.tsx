@@ -42,7 +42,7 @@ interface headerProps {
   headerIcons: HeaderIcon[];
 }
 
-export const Header: React.FunctionComponent<headerProps> = (props) => {
+export const Header: React.FunctionComponent<headerProps> = (props) => { // we could destructure props here;
   const { headerLinks, headerIcons } = props;
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
@@ -156,6 +156,7 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
 
               {iconDropDownToShow === index ? (
                 <Dropdown style={dropdownStyle}>
+                  lllkklkl;klj;
                   {<icon.iconDropdown />}
                 </Dropdown>
               ) : null}

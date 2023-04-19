@@ -1,0 +1,47 @@
+.search {
+  height: 48px;
+  width: 100%;
+  margin: 0 1.2rem;
+  border-radius: 9999px;
+  border: 1px solid #1c1d1f;
+  background-color: #f7f9fa;
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 2.4rem 0 0;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    height: 4.8rem;
+    width: 4.8rem;
+    cursor: pointer;
+
+    &:hover:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__icon {
+    height: 1rem;
+    width: 1rem;
+    color: #9b9d9e;
+  }
+
+  &__input {
+    height: 34px;
+    background-color: #f7f9fa;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

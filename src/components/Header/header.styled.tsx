@@ -283,6 +283,8 @@ export const HeaderButtonAchor = styled("a")({
   border: "1px solid #1c1d1f",
 });
 
+HeaderButtonAchor.displayName = "HeaderButtonAchorOchuko";
+
 export const HeaderGlobeButton = styled("div")({
   color: "#1c1d1f",
   fontWeight: 400,
@@ -788,6 +790,8 @@ export const LinkBarCategories = styled("ul")({
   overflowY: "hidden",
 });
 
+LinkBarCategories.displayName = 'LinkBarCategories';
+
 export const LinkBarList = styled("li")({
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
@@ -801,6 +805,8 @@ export const LinkBarList = styled("li")({
   paddingLeft: 0,
   whiteSpace: "nowrap",
 });
+
+LinkBarList.displayName = "LinkBarList";
 
 export const LinkBarListContent = styled("div")({
   lineHeight: 1.4,
