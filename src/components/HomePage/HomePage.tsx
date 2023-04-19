@@ -2,7 +2,7 @@ import * as React from "react";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Typography } from "@mui/material";
-import { BillboardCarousel } from "./billboardCarousel";
+import { CarouselSlider } from "./CarouselSlider";
 import firstBillboard from "/src/assets/images/first-billboard-banner.jpg";
 import secondBillboard from "/src/assets/images/second-billboard-banner.jpg";
 import {
@@ -25,8 +25,8 @@ import {
   ViewedCourseHeader,
   ViewedCourseTitle,
   ViewedCoursesSection,
-} from "./home.styled";
-import { CourseUnitCard } from "./courseCard";
+} from "./HomePage.styled";
+import { CourseContentCard } from "./Course";
 
 interface CourseInformation {
   img: string;
@@ -36,7 +36,7 @@ interface CourseInformation {
   rateNum: string;
   currentPrice: string;
   originalPrice: string;
-  bestSeller: string;
+  bestSeller: string | boolean;
   starfilled: boolean;
   starhalf: boolean;
   staroutline: boolean;
@@ -95,8 +95,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
           <TopBillBoardCarousel>
             <TopCarouselItem>
               <BillBoardBannerContainer>
-                
-                <BillboardCarousel
+                <CarouselSlider
                   images={images}
                   currentBillboard={currentBillboard}
                 />
@@ -151,7 +150,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                 <CourseUnitGridCarousel>
                   {courses.slice(0, 12).map((course, index) => (
                     <div key={index}>
-                      <CourseUnitCard course={course} />
+                      <CourseContentCard course={course} />
                     </div>
                   ))}
                 </CourseUnitGridCarousel>
@@ -180,7 +179,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                   {courses.slice(13, 26).map((course, index) => (
                     <div key={index}>
                       <ReviewModal>{<course.reviewModal />}</ReviewModal>
-                      <CourseUnitCard course={course} />
+                      <CourseContentCard course={course} />
                     </div>
                   ))}
                 </CourseUnitGridCarousel> */}

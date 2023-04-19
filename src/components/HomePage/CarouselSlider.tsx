@@ -3,7 +3,7 @@ import {
   BillboardContentBox,
   CarouselItem,
   ImageContainer,
-} from "./home.styled";
+} from "./HomePage.styled";
 import { Typography } from "@mui/material";
 
 type image = {
@@ -20,9 +20,7 @@ interface HomeProps {
   currentBillboard: number;
 }
 
-export const BillboardCarousel: React.FunctionComponent<HomeProps> = (
-  props
-) => {
+export const CarouselSlider: React.FunctionComponent<HomeProps> = (props) => {
   const { images, currentBillboard } = props;
 
   return (

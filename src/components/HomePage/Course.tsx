@@ -20,7 +20,7 @@ import {
   RateNumContent,
   CourseCardRateNum,
   ReviewModal,
-} from "./home.styled";
+} from "./HomePage.styled";
 import { Typography } from "@mui/material";
 import starfilled from "../../assets/svgs/star-filled-rate.svg";
 import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
@@ -34,18 +34,18 @@ type CourseDetails = {
   rateNum: string;
   currentPrice: string;
   originalPrice: string;
-  bestSeller: string;
+  bestSeller: string | boolean;
   starfilled: boolean;
   starhalf: boolean;
   staroutline: boolean;
   reviewModal: () => JSX.Element;
 };
 
-interface CourseUnitProps {
+interface CourseContentProps {
   course: CourseDetails;
 }
 
-export const CourseUnitCard: React.FunctionComponent<CourseUnitProps> = (
+export const CourseContentCard: React.FunctionComponent<CourseContentProps> = (
   props
 ) => {
   const { course } = props;

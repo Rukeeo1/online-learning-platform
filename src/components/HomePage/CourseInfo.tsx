@@ -24,7 +24,7 @@ import Aizaz from "/src/assets/images/aizaz.jpeg";
 import Reece from "/src/assets/images/reece.jpeg";
 import Mustapha from "/src/assets/images/mustapha.jpeg";
 import Maximillian from "/src/assets/images/maximillian.jpeg";
-import { CourseReviewModal } from "./courseReviewModal";
+import { CourseReviewModal } from "./CourseReviewModalDialog";
 
 export const CourseDetails = [
   {
