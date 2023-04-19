@@ -92,11 +92,25 @@ export const BillBoardBannerContainer = styled("div")({
   transition: "opacity 0.5s ease-in-out",
 });
 
-/* Carousel Inner */
+export const ImageContainer = styled("div")({
+  display: 'flex',
+  overflow: 'hidden',
+  margin: 0,
+  padding: 0,
+  marginBottom: 0
+});
+
+/* BillBoard Carousel */
+
+export const ImageCarousel = styled("div")({
+  display: "flex",
+  transition: "transform 0.3s ease-in-out",
+});
+
 export const CarouselItem = styled("div")({
   display: "flex",
   width: "100%",
-  transition: "transform 0.3s ease-in-out",
+  flex: "0 0 auto",
 });
 
 export const BillboardContentBox = styled("div")({

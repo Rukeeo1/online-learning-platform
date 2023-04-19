@@ -78,15 +78,15 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
     setCurrentBillboard((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBillboard((prev) =>
-        prev === images.length - 1 ? 0 : prev + 1
-      );
-    }, 5000);
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentBillboard((prev) =>
+  //       prev === images.length - 1 ? 0 : prev + 1
+  //     );
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+  //   return () => clearInterval(interval);
+  // }, [images.length]);
 
   return (
     <AppHomePageWrapper>
@@ -95,6 +95,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
           <TopBillBoardCarousel>
             <TopCarouselItem>
               <BillBoardBannerContainer>
+                
                 <BillboardCarousel
                   images={images}
                   currentBillboard={currentBillboard}
