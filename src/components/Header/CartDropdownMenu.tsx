@@ -19,8 +19,6 @@ export const CartDropdownMenu: React.FunctionComponent<
 > = (props) => {
   const { title1, title2 } = props;
 
-  console.log(title1, title2, "yhekkkoo");
-
   return (
     <CartDropdown>
       <AnimationWrapper>

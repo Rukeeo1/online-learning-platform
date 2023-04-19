@@ -43,6 +43,8 @@ export const HeaderContent = styled("div")({
   },
 });
 
+HeaderContent.displayName = "HeaderContent";
+
 export const Logo = styled("img")({
   width: 91,
   height: 34,
