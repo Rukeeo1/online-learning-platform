@@ -18,6 +18,8 @@ export const StyledHeader = styled("header")({
   zIndex: 1010,
 });
 
+StyledHeader.displayName = "StyledHeader";
+
 export const HeaderContent = styled("div")({
   color: "#1c1d1f",
   margin: 0,
@@ -360,7 +362,7 @@ export const Dropdown = styled("div")<{ show?: boolean }>({
   minWidth: "288px",
 });
 
-export const HeaderDropdown = styled("div")({
+export const CartDropdown = styled("div")({
   color: "#1c1d1f",
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
@@ -375,7 +377,9 @@ export const HeaderDropdown = styled("div")({
   zIndex: 1000,
 });
 
-export const HeaderAnimationWrapper = styled("div")({
+CartDropdown.displayName = "CartDropdown";
+
+export const AnimationWrapper = styled("div")({
   display: "flex",
   alignItems: "center",
   color: "#1c1d1f",
@@ -384,12 +388,13 @@ export const HeaderAnimationWrapper = styled("div")({
   fontSize: "14px",
   margin: 0,
   padding: 0,
-  // opacity: 0,
   animation:
     "popper-module--pop-in--1Pg2a 100ms cubic-bezier(.2,0,.38,.9) forwards",
 });
 
-export const HeaderPopover = styled("div")({
+AnimationWrapper.displayName = "AnimationWrapper";
+
+export const PopoverWrapper = styled("div")({
   display: "flex",
   fontWeight: 400,
   lineHeight: 1.4,
@@ -405,7 +410,9 @@ export const HeaderPopover = styled("div")({
   width: "100%",
 });
 
-export const HeaderMenu = styled("div")({
+PopoverWrapper.displayName = "PopoverWrapper";
+
+export const DropdownMenu = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -419,7 +426,9 @@ export const HeaderMenu = styled("div")({
   minWidth: "288px",
 });
 
-export const HeaderMenuContent = styled("div")({
+DropdownMenu.displayName = "DropdownMenu";
+
+export const DropdownMenuContent = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -434,7 +443,9 @@ export const HeaderMenuContent = styled("div")({
   width: "100%",
 });
 
-export const HeaderMenuTitle = styled("div")({
+DropdownMenuContent.displayName = "DropdownMenuContent";
+
+export const DropdownMenuTitle = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -450,7 +461,9 @@ export const HeaderMenuTitle = styled("div")({
   marginBottom: "16px",
 });
 
-export const HeaderMenuButton = styled("a")({
+DropdownMenuTitle.displayName = "DropdownMenuTitle";
+
+export const DropdownMenuButton = styled("a")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -468,6 +481,8 @@ export const HeaderMenuButton = styled("a")({
   whiteSpace: "nowrap",
   width: "100%",
 });
+
+DropdownMenuButton.displayName = "DropdownMenuButton";
 
 export const IconMenuTitle = styled("a")({
   textAlign: "center",
@@ -771,7 +786,7 @@ export const LinkBarContainer = styled("nav")({
   zIndex: "1009",
 });
 
-export const LinkBarCategories = styled("ul")({
+export const LinkBarCategoriesWrapper = styled("ul")({
   lineHeight: 1.4,
   color: "#1c1d1f",
   fontSize: "inherit",
@@ -788,7 +803,7 @@ export const LinkBarCategories = styled("ul")({
   overflowY: "hidden",
 });
 
-export const LinkBarList = styled("li")({
+export const LinkBarListWrapper = styled("li")({
   fontFamily:
     "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   lineHeight: 1.4,
@@ -802,7 +817,7 @@ export const LinkBarList = styled("li")({
   whiteSpace: "nowrap",
 });
 
-export const LinkBarListContent = styled("div")({
+export const LinkBarListItemContent = styled("div")({
   lineHeight: 1.4,
   color: "#1c1d1f",
   fontSize: "inherit",

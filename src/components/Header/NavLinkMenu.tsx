@@ -1,19 +1,21 @@
 import * as React from "react";
 import {
   LinkBarContainer,
-  LinkBarCategories,
-  LinkBarList,
-  LinkBarListContent,
+  LinkBarCategoriesWrapper,
+  LinkBarListWrapper,
+  LinkBarListItemContent,
   LinkBarNavButton,
   LinkBarText,
   Dropdown,
-} from "./header.styled";
+} from "./Header.styled";
 
-interface navLinkBarProps {
+interface NavLinkMenuProps {
   navLinks: any[];
 }
 
-export const NavLinkBar: React.FunctionComponent<navLinkBarProps> = (props) => {
+export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
+  props
+) => {
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
@@ -23,26 +25,26 @@ export const NavLinkBar: React.FunctionComponent<navLinkBarProps> = (props) => {
 
   return (
     <LinkBarContainer>
-      <LinkBarCategories>
-        {navLinks.map((item, index) => (
+      <LinkBarCategoriesWrapper>
+        {navLinks.map((navLink, index) => (
           <div key={index}>
-            <LinkBarList>
-              <LinkBarListContent>
+            <LinkBarListWrapper>
+              <LinkBarListItemContent>
                 <LinkBarNavButton
                   onMouseEnter={() => toggleDropDown(index)}
                   onMouseLeave={() => toggleDropDown(null)}
                 >
-                  <LinkBarText>{item.title}</LinkBarText>
+                  <LinkBarText>{navLink.title}</LinkBarText>
                 </LinkBarNavButton>
-              </LinkBarListContent>
-            </LinkBarList>
+              </LinkBarListItemContent>
+            </LinkBarListWrapper>
 
             {dropDownToShow === index ? (
-              <Dropdown>{<item.dropdown />}</Dropdown>
+              <Dropdown>{<navLink.dropdown />}</Dropdown>
             ) : null}
           </div>
         ))}
-      </LinkBarCategories>
+      </LinkBarCategoriesWrapper>
     </LinkBarContainer>
   );
 };

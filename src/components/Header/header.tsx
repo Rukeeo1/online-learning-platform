@@ -21,29 +21,37 @@ import {
   HeaderUserAvatar,
   HeaderUser,
   Dropdown,
-} from "./header.styled";
+} from "./Header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 
-interface HeaderLink {
-  style: any;
+type HeaderLink = {
   title: string;
-  dropdown: React.FunctionComponent<any>;
-}
+  dropdown: (
+    index: number,
+    buttonStyle: React.CSSProperties
+  ) => React.ReactNode;
+  style: {
+    color: string;
+    border: string;
+    backgroundColor: string;
+  };
+};
 
-interface HeaderIcon {
-  iconDropdown: React.FunctionComponent<any>;
-  linkIcon: React.FunctionComponent<any>;
-}
+type HeaderIcon = {
+  linkIcon: React.ElementType;
+  iconDropdown: React.ElementType;
+};
 
-interface headerProps {
+type HeaderProps = {
   headerLinks: HeaderLink[];
   headerIcons: HeaderIcon[];
-}
+};
 
-export const Header: React.FunctionComponent<headerProps> = (props) => {
+export const Header: React.FunctionComponent<HeaderProps> = (props) => {
   const { headerLinks, headerIcons } = props;
+
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
@@ -51,8 +59,6 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
   const [iconDropDownToShow, setIconDropDownToShow] = React.useState<
     number | null
   >(null);
-
-  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
 
@@ -105,15 +111,9 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
               <TeachOnUdemy
                 onMouseEnter={() => {
                   toggleDropDown(index);
-                  setHoveredIndex(index);
                 }}
                 onMouseLeave={() => {
-                  setHoveredIndex(null);
-                  setTimeout(() => {
-                    if (hoveredIndex === index) {
-                      toggleDropDown(null);
-                    }
-                  }, 5000);
+                  toggleDropDown(null);
                 }}
               >
                 <TeachOnUdemyAnchor>
