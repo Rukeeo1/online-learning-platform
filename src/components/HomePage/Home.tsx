@@ -25,8 +25,8 @@ import {
   ViewedCourseHeader,
   ViewedCourseTitle,
   ViewedCoursesSection,
-} from "./HomePage.styled";
-import { CourseContentCard } from "./Course";
+} from "./Home.styled";
+import { CourseContentCard } from "./CourseCard";
 
 interface CourseInformation {
   img: string;

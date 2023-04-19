@@ -20,7 +20,7 @@ import {
   RateNumContent,
   CourseCardRateNum,
   ReviewModal,
-} from "./HomePage.styled";
+} from "./Home.styled";
 import { Typography } from "@mui/material";
 import starfilled from "../../assets/svgs/star-filled-rate.svg";
 import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";

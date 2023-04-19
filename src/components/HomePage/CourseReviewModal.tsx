@@ -17,7 +17,7 @@ import {
   TotalHoursContainer,
   UpdatedCourseReview,
   CheckMark,
-} from "./HomePage.styled";
+} from "./Home.styled";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import CheckMarkIcon from "../../assets/svgs/check-mark.svg";

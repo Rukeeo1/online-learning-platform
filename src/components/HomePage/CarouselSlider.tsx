@@ -3,7 +3,7 @@ import {
   BillboardContentBox,
   CarouselItem,
   ImageContainer,
-} from "./HomePage.styled";
+} from "./Home.styled";
 import { Typography } from "@mui/material";
 
 type image = {
