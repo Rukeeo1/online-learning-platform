@@ -1,8 +1,8 @@
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import { TeachOnUdemyMenuDropdown } from "./teachOnUdemyMenuDropdown";
-import { CartMenuDropdown } from "./cartMenuDropdown";
+import { TeachOnUdemyDropdown } from "./TeachOnUdemyDropdown";
+import { CartDropdownMenu } from "./CartDropdownMenu";
 
 export const headerLinks = [
   {
@@ -13,7 +13,7 @@ export const headerLinks = [
       border: "0px",
     },
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere."
@@ -31,7 +31,7 @@ export const headerLinks = [
       border: "0px",
     },
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Turn what you know into an"
         title2="opportunity and reach"
         title3="millions around the world."
@@ -48,7 +48,7 @@ export const headerLinks = [
       border: "2px solid #1c1d1f",
     },
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Start learning from over"
         title2="213,000 courses today."
         title3=""
@@ -73,7 +73,7 @@ export const headerIcons = [
     ),
 
     iconDropdown: () => (
-      <CartMenuDropdown
+      <CartDropdownMenu
         title1="Your wishlist is empty"
         title2="Explore courses"
       />
@@ -91,7 +91,7 @@ export const headerIcons = [
       />
     ),
     iconDropdown: () => (
-      <CartMenuDropdown title1="Your cart is empty" title2="Keep shopping" />
+      <CartDropdownMenu title1="Your cart is empty" title2="Keep shopping" />
     ),
   },
   {
@@ -106,7 +106,7 @@ export const headerIcons = [
       />
     ),
     iconDropdown: () => (
-      <CartMenuDropdown title1="No notifications" title2="" />
+      <CartDropdownMenu title1="No notifications" title2="" />
     ),
   },
 ];
@@ -115,7 +115,7 @@ export const navLinks = [
   {
     title: "Development",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -127,7 +127,7 @@ export const navLinks = [
   {
     title: "Business",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -139,7 +139,7 @@ export const navLinks = [
   {
     title: "Finance & Accounting",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -151,7 +151,7 @@ export const navLinks = [
   {
     title: "IT & Software",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -163,7 +163,7 @@ export const navLinks = [
   {
     title: "Office Productivity",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -175,7 +175,7 @@ export const navLinks = [
   {
     title: "Personal Development",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -187,7 +187,7 @@ export const navLinks = [
   {
     title: "Design",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -199,7 +199,7 @@ export const navLinks = [
   {
     title: "Marketing",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -211,7 +211,7 @@ export const navLinks = [
   {
     title: "Health & Fitness",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
@@ -223,7 +223,7 @@ export const navLinks = [
   {
     title: "Music",
     dropdown: (index: number, buttonStyle: React.CSSProperties) => (
-      <TeachOnUdemyMenuDropdown
+      <TeachOnUdemyDropdown
         title1="Get your team access to over"
         title2="19000 top Udemy courses,"
         title3="anytime, anywhere"
