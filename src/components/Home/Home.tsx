@@ -27,6 +27,7 @@ import {
   ViewedCoursesSection,
 } from "./Home.styled";
 import { CourseContentCard } from "./CourseCard";
+import "./Home.css";
 
 interface CourseInformation {
   img: string;
@@ -89,11 +90,11 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   // }, [images.length]);
 
   return (
-    <AppHomePageWrapper>
-      <AppHomeDataContent>
-        <TopCarouselSection>
-          <TopBillBoardCarousel>
-            <TopCarouselItem>
+    <div className="homepage-container">
+      <div className='home-data-section'>
+        <div className='banner-carousel-container'>
+          <div className='hero-billboard-carousel'>
+            <div className='top-carousel-item'>
               <BillBoardBannerContainer>
                 <CarouselSlider
                   images={images}
@@ -108,9 +109,9 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                   <ArrowForwardIosOutlinedIcon />
                 </BillboardForwardButton>
               </BillBoardBannerContainer>
-            </TopCarouselItem>
-          </TopBillBoardCarousel>
-        </TopCarouselSection>
+            </div>
+          </div>
+        </div>
 
         <CourseDiscoveryContainer>
           <Typography
@@ -195,7 +196,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
             </ViewedCoursesSection>
           </RecommendedCourseContainer>
         </CourseDiscoveryContainer>
-      </AppHomeDataContent>
-    </AppHomePageWrapper>
+      </div>
+    </div>
   );
 };
