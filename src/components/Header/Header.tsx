@@ -73,7 +73,7 @@ export const Header: React.FunctionComponent<HeaderProps> = (props) => {
           // Declare dropdown style object outside of return statement
           const dropdownStyle: React.CSSProperties = {
             position: "absolute",
-            right: index === 0 ? "438px" : index === 1 ? "312px" : "214px",
+            right: index === 0 ? "438px" : index === 1 ? "312px" : "216px",
           };
 
           const buttonStyle: React.CSSProperties = {

@@ -23,24 +23,30 @@ export const TeachOnUdemyDropdown: React.FunctionComponent<componentProps> = (
   const { title1, title2, title3, buttonTitle, buttonStyle } = props;
 
   return (
-    <CartDropdown>
-      <AnimationWrapper>
-        <PopoverWrapper>
-          <DropdownMenu>
-            <DropdownMenuContent>
-              <DropdownMenuTitle>
+    <div className="cart-dropdown">
+      <div className="animation-wrapper">
+        <div className="popover-wrapper">
+          <div className="dropdown-menu">
+            <div className="dropdown-menu-content">
+              <div className="dropdown-menu-title">
                 <span>{title1}</span>
                 <span>{title2}</span>
                 <span>{title3}</span>
-              </DropdownMenuTitle>
+              </div>
 
-              <DropdownMenuButton style={buttonStyle}>
+              <a
+                className="dropdown-menu-button"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                style={buttonStyle}
+              >
                 <span>{buttonTitle}</span>
-              </DropdownMenuButton>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </PopoverWrapper>
-      </AnimationWrapper>
-    </CartDropdown>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
