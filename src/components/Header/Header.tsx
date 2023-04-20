@@ -1,30 +1,13 @@
 import * as React from "react";
 import {
-  Logo,
-  HeaderContent,
-  Nav,
-  StyledHeader,
-  CategoryButton,
-  HeaderSpan,
-  HeaderFormField,
-  Form,
-  FormInputField,
-  InputSearchButton,
-  TeachOnUdemy,
-  TeachOnUdemyAnchor,
-  CartContent,
-  CartAnchor,
-  HeaderButton,
   HeaderButtonAchor,
   HeaderGlobeButton,
   HeaderGlobeAchor,
-  HeaderUserAvatar,
-  HeaderUser,
-  Dropdown,
 } from "./Header.styled";
 import UdemyLogo from "../../assets/svgs/logo-udemy.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import "./Header.css";
 
 type HeaderLink = {
   title: string;
@@ -56,43 +39,36 @@ export const Header: React.FunctionComponent<HeaderProps> = (props) => {
     null
   );
 
-  const [iconDropDownToShow, setIconDropDownToShow] = React.useState<
+  const [dropDownIconVisible, setDropDownIconVisible] = React.useState<
     number | null
   >(null);
 
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
 
   const toggleIconDropDown = (value: number | null) =>
-    setIconDropDownToShow(value);
+    setDropDownIconVisible(value);
 
   return (
-    <StyledHeader>
-      <HeaderContent>
-        <Logo src={UdemyLogo} alt="" />
+    <div className="header">
+      <div className="header-content">
+        <img className="logo-image" src={UdemyLogo} alt="" />
 
-        <Nav>
-          <CategoryButton>
-            <HeaderSpan
-              sx={{
-                ":hover": {
-                  color: "#5623D0",
-                },
-              }}
-            >
-              Categories
-            </HeaderSpan>
-          </CategoryButton>
-        </Nav>
+        <nav>
+          <div className="category">
+            <span className="category-context">Categories</span>
+          </div>
+        </nav>
 
-        <HeaderFormField>
-          <Form>
-            <FormInputField placeholder="Search for anything" />
+        <div className="header-searchbar">
+          <form>
+            <input className="input-field" placeholder="Search for anything" />
 
-            <InputSearchButton>
-              <SearchIcon style={{ color: "#1c1d1f" }} />
-            </InputSearchButton>
-          </Form>
-        </HeaderFormField>
+            <button className="search-button">
+              <SearchIcon className="search-icon" />
+            </button>
+          </form>
+        </div>
+
         {headerLinks.map((link, index) => {
           // Declare dropdown style object outside of return statement
           const dropdownStyle: React.CSSProperties = {
@@ -108,7 +84,8 @@ export const Header: React.FunctionComponent<HeaderProps> = (props) => {
 
           return (
             <div key={index}>
-              <TeachOnUdemy
+              <div
+                className="teach-on-udemy"
                 onMouseEnter={() => {
                   toggleDropDown(index);
                 }}
@@ -116,23 +93,20 @@ export const Header: React.FunctionComponent<HeaderProps> = (props) => {
                   toggleDropDown(null);
                 }}
               >
-                <TeachOnUdemyAnchor>
-                  <HeaderSpan
-                    sx={{
-                      ":hover": {
-                        color: "#5623D0",
-                      },
-                    }}
-                  >
-                    {link.title}
-                  </HeaderSpan>
-                </TeachOnUdemyAnchor>
-              </TeachOnUdemy>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  className="teach-on-udemy-anchor"
+                >
+                  <span className="teach-on-udemy-text">{link.title}</span>
+                </a>
+              </div>
 
               {dropDownToShow === index ? (
-                <Dropdown style={dropdownStyle}>
+                <div style={dropdownStyle}>
                   {headerLinks[index].dropdown(index, buttonStyle)}
-                </Dropdown>
+                </div>
               ) : null}
             </div>
           );
@@ -147,26 +121,135 @@ export const Header: React.FunctionComponent<HeaderProps> = (props) => {
 
           return (
             <div key={index}>
-              <CartContent
+              <div
+                className="cart"
                 onMouseEnter={() => toggleIconDropDown(index)}
                 onMouseLeave={() => toggleIconDropDown(null)}
               >
-                <CartAnchor>{<icon.linkIcon />}</CartAnchor>
-              </CartContent>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  className="cart-anchor"
+                >
+                  {<icon.linkIcon />}
+                </a>
+              </div>
 
-              {iconDropDownToShow === index ? (
-                <Dropdown style={dropdownStyle}>
-                  {<icon.iconDropdown />}
-                </Dropdown>
+              {dropDownIconVisible === index ? (
+                <div style={dropdownStyle}>{<icon.iconDropdown />}</div>
               ) : null}
             </div>
           );
         })}
 
-        <HeaderUserAvatar>
-          <HeaderUser>WO</HeaderUser>
-        </HeaderUserAvatar>
-      </HeaderContent>
-    </StyledHeader>
+        <div className="header-user-avatar">
+          <div className="header-user">WO</div>
+        </div>
+      </div>
+    </div>
   );
 };
+
+// <StyledHeader>
+//   <HeaderContent>
+//     <Logo src={UdemyLogo} alt="" />
+
+//     <Nav>
+//       <CategoryButton>
+//         <HeaderSpan
+//           sx={{
+//             ":hover": {
+//               color: "#5623D0",
+//             },
+//           }}
+//         >
+//           Categories
+//         </HeaderSpan>
+//       </CategoryButton>
+//     </Nav>
+
+//     <HeaderFormField>
+//       <Form>
+//         <FormInputField placeholder="Search for anything" />
+
+//         <InputSearchButton>
+//           <SearchIcon style={{ color: "#1c1d1f" }} />
+//         </InputSearchButton>
+//       </Form>
+//     </HeaderFormField>
+//     {headerLinks.map((link, index) => {
+//       // Declare dropdown style object outside of return statement
+//       const dropdownStyle: React.CSSProperties = {
+//         position: "absolute",
+//         right: index === 0 ? "438px" : index === 1 ? "312px" : "214px",
+//       };
+
+//       const buttonStyle: React.CSSProperties = {
+//         color: headerLinks[index].style.color,
+//         border: headerLinks[index].style.border,
+//         backgroundColor: headerLinks[index].style.backgroundColor,
+//       };
+
+//       return (
+//         <div key={index}>
+//           <TeachOnUdemy
+//             onMouseEnter={() => {
+//               toggleDropDown(index);
+//             }}
+//             onMouseLeave={() => {
+//               toggleDropDown(null);
+//             }}
+//           >
+//             <TeachOnUdemyAnchor>
+//               <HeaderSpan
+//                 sx={{
+//                   ":hover": {
+//                     color: "#5623D0",
+//                   },
+//                 }}
+//               >
+//                 {link.title}
+//               </HeaderSpan>
+//             </TeachOnUdemyAnchor>
+//           </TeachOnUdemy>
+
+//           {dropDownToShow === index ? (
+//             <Dropdown style={dropdownStyle}>
+//               {headerLinks[index].dropdown(index, buttonStyle)}
+//             </Dropdown>
+//           ) : null}
+//         </div>
+//       );
+//     })}
+
+// {headerIcons.map((icon, index) => {
+//   // Declare dropdown style object outside of return statement
+//   const dropdownStyle: React.CSSProperties = {
+//     position: "absolute",
+//     right: index === 0 ? "172px" : index === 1 ? "122px" : "72px",
+//   };
+
+//   return (
+//     <div key={index}>
+//       <CartContent
+//         onMouseEnter={() => toggleIconDropDown(index)}
+//         onMouseLeave={() => toggleIconDropDown(null)}
+//       >
+//         <CartAnchor>{<icon.linkIcon />}</CartAnchor>
+//       </CartContent>
+
+//       {dropDownIconVisible === index ? (
+//         <Dropdown style={dropdownStyle}>
+//           {<icon.iconDropdown />}
+//         </Dropdown>
+//       ) : null}
+//     </div>
+//   );
+// })}
+
+// <HeaderUserAvatar>
+//   <HeaderUser>WO</HeaderUser>
+// </HeaderUserAvatar>
+//   </HeaderContent>
+// </StyledHeader>
