@@ -237,14 +237,13 @@
     }
   }
 
-  // Header dropdown
+  // Cart dropdown
 
   .dropdown-container {
     position: absolute;
     top: 73px;
     background: 0 0;
     min-width: 288px;
-    background: red;
   }
 
   .cart {
@@ -314,6 +313,88 @@
       margin: 8px;
       width: 32px;
       height: 32px;
+    }
+  }
+}
+
+// NavLinkMenu
+
+.linkbar {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-top: 1px solid #d1d7dc;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1009;
+
+  &-categories-wrapper {
+    font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+      Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+      segoe ui emoji, segoe ui symbol;
+    line-height: 1.4;
+    color: #1c1d1f;
+    font-size: inherit;
+    font-weight: 400;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+
+    & .linkbar-list-wrapper {
+      line-height: 1.4;
+      color: #1c1d1f;
+      font-size: inherit;
+      font-weight: 400;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      padding-left: 0;
+      white-space: nowrap;
+
+      .linkbar-anchor {
+        margin: 0;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02rem;
+        font-size: 14px;
+        position: relative;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        white-space: nowrap;
+        background-color: transparent;
+        min-width: auto;
+        padding: 8px 16px;
+        height: 48px;
+        color: #1c1d1f;
+        text-decoration: none;
+
+        & .linkbar-text {
+          list-style: none;
+          letter-spacing: -0.02rem;
+          cursor: pointer;
+          white-space: nowrap;
+          color: #1c1d1f;
+          margin: 0;
+          padding: 0;
+          font-weight: 400;
+          line-height: 1.4;
+          font-size: 14px;
+        }
+      }
     }
   }
 }

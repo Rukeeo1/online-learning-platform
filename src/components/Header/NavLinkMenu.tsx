@@ -1,13 +1,5 @@
 import * as React from "react";
-import {
-  LinkBarContainer,
-  LinkBarCategoriesWrapper,
-  LinkBarListWrapper,
-  LinkBarListItemContent,
-  LinkBarNavButton,
-  LinkBarText,
-  Dropdown,
-} from "./Header.styled";
+import { Dropdown } from "./Header.styled";
 
 type NavLinkMenu = {
   title: string;
@@ -32,20 +24,22 @@ export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
 
   return (
-    <LinkBarContainer>
-      <LinkBarCategoriesWrapper>
+    <nav className="linkbar">
+      <ul className="linkbar-categories-wrapper">
         {navLinks.map((navLink, index) => (
           <div key={index}>
-            <LinkBarListWrapper>
-              <LinkBarListItemContent>
-                <LinkBarNavButton
-                  onMouseEnter={() => toggleDropDown(index)}
-                  onMouseLeave={() => toggleDropDown(null)}
-                >
-                  <LinkBarText>{navLink.title}</LinkBarText>
-                </LinkBarNavButton>
-              </LinkBarListItemContent>
-            </LinkBarListWrapper>
+            <li className="linkbar-list-wrapper">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                className="linkbar-anchor"
+                onMouseEnter={() => toggleDropDown(index)}
+                onMouseLeave={() => toggleDropDown(null)}
+              >
+                <span className="linkbar-text">{navLink.title}</span>
+              </a>
+            </li>
 
             {dropDownToShow === index ? (
               <Dropdown>
@@ -54,7 +48,7 @@ export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
             ) : null}
           </div>
         ))}
-      </LinkBarCategoriesWrapper>
-    </LinkBarContainer>
+      </ul>
+    </nav>
   );
 };
