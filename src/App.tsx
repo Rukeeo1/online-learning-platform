@@ -1,11 +1,4 @@
-import { useState } from "react";
-import Button from "@mui/material/Button";
-import Login from "./components/Login";
-// import { Header } from "./components/Header/Header";
-import { HomePage } from "./components/HomePage/homePage";
-import { LoginForm } from "./components/LoginForm/loginForm";
 import { NavLinkMenu } from "./components/Header/NavLinkMenu";
-// import { ProfileModal } from "./components/Header/profileModal";
 import {
   headerIcons,
   headerLinks,
