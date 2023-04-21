@@ -2,7 +2,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import { HeaderDropdownRightMenu } from "./HeaderDropdownRightMenu";
-import { CartDropdownMenu } from "./CartDropdownMenu";
+import { HeaderIconsGroup } from "./HeaderIconsGroupDropdownMenu";
 
 export const headerNavLinks = [
   {
@@ -73,7 +73,7 @@ export const headerIcons = [
     ),
 
     iconDropdown: () => (
-      <CartDropdownMenu
+      <HeaderIconsGroup
         title1="Your wishlist is empty"
         title2="Explore courses"
       />
@@ -91,7 +91,7 @@ export const headerIcons = [
       />
     ),
     iconDropdown: () => (
-      <CartDropdownMenu title1="Your cart is empty" title2="Keep shopping" />
+      <HeaderIconsGroup title1="Your cart is empty" title2="Keep shopping" />
     ),
   },
   {
@@ -106,7 +106,7 @@ export const headerIcons = [
       />
     ),
     iconDropdown: () => (
-      <CartDropdownMenu title1="No notifications" title2="" />
+      <HeaderIconsGroup title1="No notifications" title2="" />
     ),
   },
 ];

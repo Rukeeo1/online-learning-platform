@@ -9,13 +9,13 @@ import {
   IconMenuButton,
 } from "./Header.styled";
 
-interface CartDropdownMenuProps {
+interface HeaderIconsGroupProps {
   title1: string;
   title2: string;
 }
 
-export const CartDropdownMenu: React.FunctionComponent<
-  CartDropdownMenuProps
+export const HeaderIconsGroup: React.FunctionComponent<
+  HeaderIconsGroupProps
 > = (props) => {
   const { title1, title2 } = props;
 
