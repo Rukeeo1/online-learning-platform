@@ -8,9 +8,9 @@ interface componentProps {
   buttonStyle: React.CSSProperties; // Add buttonStyle prop
 }
 
-export const NavDropdownRightMenu: React.FunctionComponent<componentProps> = (
-  props
-) => {
+export const HeaderDropdownRightMenu: React.FunctionComponent<
+  componentProps
+> = (props) => {
   const { title1, title2, title3, buttonTitle, buttonStyle } = props;
 
   return (

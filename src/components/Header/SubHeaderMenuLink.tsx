@@ -2,11 +2,11 @@ import * as React from "react";
 import { Dropdown } from "./Header.styled";
 import { navLinks } from "./HeaderDetails";
 
-interface NavLinkMenuProps {}
+interface SubHeaderMenuLinkProps {}
 
-export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
-  props
-) => {
+export const SubHeaderMenuLink: React.FunctionComponent<
+  SubHeaderMenuLinkProps
+> = (props) => {
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
