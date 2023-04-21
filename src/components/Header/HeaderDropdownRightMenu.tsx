@@ -1,13 +1,4 @@
 import * as React from "react";
-import {
-  CartDropdown,
-  AnimationWrapper,
-  PopoverWrapper,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTitle,
-  DropdownMenuButton,
-} from "./Header.styled";
 
 interface componentProps {
   title1: string;
@@ -17,9 +8,9 @@ interface componentProps {
   buttonStyle: React.CSSProperties; // Add buttonStyle prop
 }
 
-export const TeachOnUdemyDropdown: React.FunctionComponent<componentProps> = (
-  props
-) => {
+export const HeaderDropdownRightMenu: React.FunctionComponent<
+  componentProps
+> = (props) => {
   const { title1, title2, title3, buttonTitle, buttonStyle } = props;
 
   return (
