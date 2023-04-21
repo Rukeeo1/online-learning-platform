@@ -1,17 +1,8 @@
 import * as React from "react";
 import { Dropdown } from "./Header.styled";
+import { navLinks } from "./HeaderDetails";
 
-type NavLinkMenu = {
-  title: string;
-  dropdown: (
-    index: number,
-    buttonStyle: React.CSSProperties
-  ) => React.ReactNode | null; // return type includes null
-};
-
-interface NavLinkMenuProps {
-  navLinks: NavLinkMenu[];
-}
+interface NavLinkMenuProps {}
 
 export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
   props
@@ -19,7 +10,7 @@ export const NavLinkMenu: React.FunctionComponent<NavLinkMenuProps> = (
   const [dropDownToShow, setDropDownToShow] = React.useState<number | null>(
     null
   );
-  const { navLinks } = props;
+  const {} = props;
 
   const toggleDropDown = (value: number | null) => setDropDownToShow(value);
 
