@@ -1,34 +1,74 @@
-.login-form--greeting {
+.login {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+  width: 100%;
+}
+.login__component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
   color: #1c1d1f;
   margin: 0;
   padding: 0;
   width: 100%;
-  /* max-width: 600px; */
+}
+.login__auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  max-width: 100%;
+  padding: 48px 24px;
+}
+.login__auth-title {
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
   font-size: 16px;
   margin-bottom: 16px;
+  width: 100%;
 }
-
-.auth-google--social-btn {
+.login .ud-btn {
   margin: 0;
-  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
-    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
-    segoe ui symbol;
+  background-image: none;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
   font-size: 16px;
   position: relative;
   align-items: center;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   min-width: 80px;
   padding: 0 12px;
+  vertical-align: bottom;
   white-space: nowrap;
   height: 48px;
   color: #1c1d1f;
@@ -38,11 +78,10 @@
   width: 100%;
   justify-content: left;
 }
-
-.googleIcon {
+.login .google-auth-icon {
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
   font-size: 16px;
   cursor: pointer;
   white-space: nowrap;
@@ -56,8 +95,52 @@
   height: 32px;
   margin-right: 8px;
 }
-
-.form-input-control {
+.login .btn-title {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  margin-left: 4px;
+}
+.login__form-container {
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+}
+.login__email-container {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  max-width: 600px;
+  width: 100%;
+}
+.login__form-content {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #1c1d1f;
+  position: relative;
+  width: 100%;
+}
+.login__input-field {
   margin: 0;
   background-image: none;
   color: #1c1d1f;
@@ -68,27 +151,23 @@
   display: block;
   width: 100%;
   border: 0 !important;
-  box-shadow: none !important;
   outline: 0 !important;
   height: 60px !important;
   padding: 20px 16px 0;
-  /* opacity: 0; */
   transition: opacity 100ms linear;
   flex: 1;
 }
-
-.input-form-label {
+.login .ud-form-label {
   color: #1c1d1f;
   padding: 0;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
   font-size: 14px;
   display: flex;
   align-items: center;
   margin: 0;
   padding-bottom: 8px;
-  width: 100%;
   min-height: 28px;
   position: absolute;
   top: 8px;
@@ -100,14 +179,13 @@
   transform-origin: top left;
   right: 0;
 }
-
-.form-label-content {
-  color: #1c1d1f;
+.login .ud-compact-form-label-content {
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
   font-size: 14px;
   pointer-events: none;
+  box-sizing: border-box;
   margin: 0;
   flex: 1;
   min-width: 1px;
@@ -115,26 +193,36 @@
   display: flex;
   align-items: center;
 }
-
-.form-label-content {
-  transition: all 0.3s ease;
-}
-
-.form-input-control:focus + .input-form-label .form-label-content {
-  transform: translateY(-90%);
-  font-size: 12px;
-  transition: all 0.5s ease;
-}
-
-.login-submit-button {
-  margin: 0;
-  background-image: none;
-  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
-    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
-    segoe ui symbol;
+.login .ud-compact-form-label-text {
+  color: #1c1d1f;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02rem;
+  font-size: 14px;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.login__password-container {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  width: 100%;
+}
+.login__submit-button {
+  margin: 0;
+  background-image: none;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
   font-size: 16px;
   position: relative;
   align-items: center;
@@ -149,26 +237,35 @@
   height: 48px;
   color: #fff;
   background-color: #a435f0;
+  margin-top: 16px;
   width: 100%;
 }
-
-.login-submit-button:hover {
-  background-color: #8711d8;
-}
-
-.link-underline {
-  text-align: center;
+.login__auth-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   line-height: 1.4;
   font-size: 16px;
+  color: #1c1d1f;
   margin: 0;
   padding: 0;
-  color: #5624d0;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  margin-top: 16px;
+  text-align: center;
+  width: 100%;
 }
-
-.signup-text-bold {
+.login__forgot-password-container {
+  color: #1c1d1f;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+}
+.login .ud-link-underline {
   text-align: center;
   line-height: 1.4;
   font-size: 16px;
@@ -179,15 +276,33 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
-.organization-text-bold {
-  text-align: center;
+.login__auth-line-separator {
+  font-weight: 400;
   line-height: 1.4;
   font-size: 16px;
+  color: #1c1d1f;
+  text-align: center;
+  padding: 0;
+  border-top: 1px solid #d1d7dc;
+  margin: 16px 0;
+  width: 100%;
+}
+.login__signup-for-account {
+  color: #1c1d1f;
+  text-align: center;
   margin: 0;
   padding: 0;
-  color: #5624d0;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
 }
+.login__organization {
+  color: #1c1d1f;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+  margin-top: 4px;
+}/*# sourceMappingURL=LoginForm.css.map */

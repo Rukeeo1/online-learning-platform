@@ -1,152 +1,134 @@
-import { TextField } from "@mui/material";
 import * as React from "react";
 import { Svgs } from "../../assets/svgs";
-import "./loginForm.css";
-import {
-  AccountSignUp,
-  AuthFormFieldGroup,
-  Div,
-  ForgotPassword,
-  FormField,
-  FormFieldContainer,
-  FormInputContainer,
-  LoginComponent,
-  LoginFormContainer,
-  LoginFormFooter,
-  LoginFormGroup,
-  LoginMainContainer,
-  OrganizationAccount,
-} from "./loginForm.styled";
+import "./LoginForm.css";
 
-interface loginProps {}
+interface LoginFormProps {}
 
-export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
+export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
+  const {} = props;
+
   return (
+    <div className="login">
+      <div className="login__component">
+        <div className="login__auth-container">
+          <h2 className="login__auth-title">Log in to your Udemy account</h2>
 
+          <button
+            type="button"
+            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
+            data-purpose="google-login"
+          >
+            <Svgs.GoogleIcon className="google-auth-icon" />
+            <span className="btn-title">Continue with Google</span>
+          </button>
 
+          <button
+            type="button"
+            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
+            data-purpose="google-login"
+          >
+            <Svgs.FacebookIcon className="google-auth-icon" />
+            <span className="btn-title">Continue with Facebook</span>
+          </button>
 
-    
-    <LoginMainContainer>
-      <LoginComponent>
-        <LoginFormContainer>
-          <h2 className="login-form--greeting">Log in to your Udemy account</h2>
+          <button
+            type="button"
+            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
+            data-purpose="google-login"
+          >
+            <Svgs.AppleIcon className="google-auth-icon" />
+            <span className="btn-title">Continue with Apple</span>
+          </button>
 
-          <Div>
-            <button
-              type="button"
-              className="auth-google--social-btn"
-              data-purpose="google-login"
-            >
-              <Svgs.googleIcon className="googleIcon" />
-              <span>Continue with Google</span>
+          <form className="login__form-container">
+            <div className="login__email-container">
+              <div className="login__form-content">
+                <label
+                  htmlFor="form-group--email"
+                  className="ud-form-label ud-heading-sm"
+                >
+                  <span className="ud-compact-form-label-content">
+                    <span className="ud-compact-form-label-text">Email</span>
+                  </span>
+                </label>
+
+                <input
+                  name="email"
+                  id="form-group--email"
+                  type="email"
+                  className="login__input-field"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="login__password-container">
+              <div className="login__form-content">
+                <label
+                  htmlFor="form-group--email"
+                  className="ud-form-label ud-heading-sm"
+                >
+                  <span className="ud-compact-form-label-content">
+                    <span className="ud-compact-form-label-text">Password</span>
+                  </span>
+                </label>
+
+                <input
+                  name="password"
+                  id="form-group--password"
+                  type="password"
+                  className="login__input-field"
+                  required
+                />
+              </div>
+            </div>
+
+            <button className="login__submit-button">
+              <span>Log in</span>
             </button>
-            <button
-              type="button"
-              className="auth-google--social-btn"
-              data-purpose="facebook-login"
-            >
-              <Svgs.facebookIcon className="googleIcon" />
-              <span>Continue with Facebook</span>
-            </button>
-            <button
-              type="button"
-              className="auth-google--social-btn"
-              data-purpose="apple-login"
-            >
-              <Svgs.appleIcon className="googleIcon" />
-              <span>Continue with Apple</span>
-            </button>
+          </form>
 
-            <LoginFormGroup>
-              <FormField>
-                <AuthFormFieldGroup>
-                  <FormFieldContainer>
-                    <FormInputContainer>
-                      <input
-                        aria-invalid="false"
-                        name="email"
-                        min-length="7"
-                        max-length="64"
-                        id="form-group--1"
-                        type="email"
-                        className="form-input-control"
-                      />
-                      <label
-                        htmlFor="form-group--1"
-                        className="input-form-label"
-                      >
-                        <span className="form-label-content">
-                          <span className="ud-compact-form-label-text">
-                            Email
-                          </span>
-                        </span>
-                      </label>
-                    </FormInputContainer>
-                  </FormFieldContainer>
-                </AuthFormFieldGroup>
-
-                <AuthFormFieldGroup>
-                  <FormFieldContainer>
-                    <FormInputContainer>
-                      <input
-                        aria-invalid="false"
-                        name="password"
-                        min-length="7"
-                        max-length="64"
-                        id="form-group--1"
-                        type="password"
-                        className="form-input-control"
-                      />
-                      <label
-                        htmlFor="form-group--1"
-                        className="input-form-label"
-                      >
-                        <span className="form-label-content">
-                          <span className="ud-compact-form-label-text">
-                            Password
-                          </span>
-                        </span>
-                      </label>
-                    </FormInputContainer>
-                  </FormFieldContainer>
-                </AuthFormFieldGroup>
-                <button type="submit" className="login-submit-button">
-                  <span>Log In</span>
-                </button>
-              </FormField>
-            </LoginFormGroup>
-          </Div>
-
-          <LoginFormFooter>
-            <ForgotPassword>
+          <div className="login__auth-footer">
+            <div className="login__forgot-password-container">
               <span>
                 or{" "}
-                <a className="link-underline" href="/user/forgot-password/">
+                <a
+                  className="ud-text-bold ud-link-underline"
+                  href="/user/forgot-password/"
+                >
                   Forgot Password
                 </a>
               </span>
-            </ForgotPassword>
+            </div>
 
-            <AccountSignUp>
+            <div className="login__auth-line-separator"></div>
+
+            <div className="login__signup-for-account">
               <span>
                 Don't have an account?{" "}
-                <a className="signup-text-bold" href="/join/signup-popup/">
+                <a
+                  className="ud-text-bold ud-link-underline"
+                  href="/join/signup-popup/?locale=en_US&amp;next=https%3A%2F%2Fwww.udemy.com%2F&amp;response_type=html"
+                  style={{ fontSize: "14px" }}
+                >
                   Sign up
                 </a>
               </span>
-            </AccountSignUp>
+            </div>
 
-            <OrganizationAccount>
+            <div className="login__organization">
               <a
-                className="organization-text-bold"
+                className="ud-text-bold ud-link-underline"
                 href="/organization/global-login/"
+                data-disable-loader="true"
+                style={{ fontSize: "14px" }}
               >
-                Log in with your organization.
+                Log in with your organization
               </a>
-            </OrganizationAccount>
-          </LoginFormFooter>
-        </LoginFormContainer>
-      </LoginComponent>
-    </LoginMainContainer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

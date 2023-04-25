@@ -1,0 +1,337 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+    Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+  width: 100%;
+
+  &__component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+      Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+      segoe ui emoji, segoe ui symbol;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    max-width: 100%;
+    padding: 48px 24px;
+  }
+
+  &__auth-title {
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    max-width: 600px;
+    font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+      Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .ud-btn {
+    margin: 0;
+    background-image: none;
+    font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+      Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 16px;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 80px;
+    padding: 0 12px;
+    vertical-align: bottom;
+    white-space: nowrap;
+    height: 48px;
+    color: #1c1d1f;
+    background-color: transparent;
+    border: 1px solid #1c1d1f;
+    margin-bottom: 8px;
+    width: 100%;
+    justify-content: left;
+  }
+
+  .google-auth-icon {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    fill: currentColor;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  .btn-title {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    margin-left: 4px;
+  }
+
+  &__form-container {
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__email-container {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    min-width: 180px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__form-content {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid #1c1d1f;
+    position: relative;
+    width: 100%;
+  }
+
+  &__input-field {
+    margin: 0;
+    background-image: none;
+    color: #1c1d1f;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    border: 0 !important;
+    outline: 0 !important;
+    height: 60px !important;
+    padding: 20px 16px 0;
+    transition: opacity 100ms linear;
+    flex: 1;
+  }
+
+  .ud-form-label {
+    color: #1c1d1f;
+    padding: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 8px;
+    min-height: 28px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border: 1px solid transparent;
+    pointer-events: none;
+    transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+    transform: translateY(12px);
+    transform-origin: top left;
+    right: 0;
+  }
+
+  .ud-compact-form-label-content {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 14px;
+    pointer-events: none;
+    box-sizing: border-box;
+    margin: 0;
+    flex: 1;
+    min-width: 1px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ud-compact-form-label-text {
+    color: #1c1d1f;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 14px;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__password-container {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  &__submit-button {
+    margin: 0;
+    background-image: none;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 16px;
+    position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 80px;
+    padding: 0 12px;
+    justify-content: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+    height: 48px;
+    color: #fff;
+    background-color: #a435f0;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  &__auth-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__forgot-password-container {
+    color: #1c1d1f;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+
+  .ud-link-underline {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #5624d0;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  &__auth-line-separator {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #1c1d1f;
+    text-align: center;
+    padding: 0;
+    border-top: 1px solid #d1d7dc;
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  &__signup-for-account {
+    color: #1c1d1f;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+
+  &__organization {
+    color: #1c1d1f;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
