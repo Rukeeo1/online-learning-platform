@@ -1,6 +1,6 @@
 import { Header } from "./components/Header/header";
 import { HomePage } from "./components/HomePage/homePage";
-import { LoginForm } from "./components/LoginForm/LoginForm";
+import { LoginForm } from "./components/LoginForm/Login";
 // import './App.css'
 
 function App() {

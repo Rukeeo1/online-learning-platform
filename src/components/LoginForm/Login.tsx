@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Svgs } from "../../assets/svgs";
-import "./LoginForm.css";
+import "./Login.css";
 
 interface LoginFormProps {}
 
