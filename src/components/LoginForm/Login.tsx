@@ -1,23 +1,12 @@
 import * as React from "react";
 import "./Login.css";
 import { LoginSocialButton } from "./LoginSocialButton";
+import { LoginForm } from "./LoginFormField";
 
-interface LoginFormProps {}
+interface LoginProps {}
 
-export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
+export const Login: React.FunctionComponent<LoginProps> = (props) => {
   const {} = props;
-
-  const [isInputFocused, setIsInputFocused] = React.useState(false);
-
-  const handleInputBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.value) {
-      setIsInputFocused(false);
-    }
-  };
-
-  const handleInputFocus = () => {
-    setIsInputFocused(true);
-  };
 
   return (
     <div className="login">
@@ -27,56 +16,7 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
 
           <LoginSocialButton />
 
-          <form className="login__form-container">
-            <div className="login__email-container">
-              <div className="login__form-content">
-                <label
-                  htmlFor="form-group--email"
-                  className={`login__form-label ${
-                    isInputFocused ? "active" : ""
-                  }`}
-                >
-                  <span className="ud-compact-form-label-content">
-                    <span className="ud-compact-form-label-text">Email</span>
-                  </span>
-                </label>
-                <input
-                  name="email"
-                  id="form-group--email"
-                  type="email"
-                  className="login__input-field"
-                  required
-                  onBlur={handleInputBlur}
-                  onFocus={handleInputFocus}
-                />
-              </div>
-            </div>
-
-            <div className="login__password-container">
-              <div className="login__form-content">
-                <label
-                  htmlFor="form-group--email"
-                  className="ud-form-label ud-heading-sm"
-                >
-                  <span className="ud-compact-form-label-content">
-                    <span className="ud-compact-form-label-text">Password</span>
-                  </span>
-                </label>
-
-                <input
-                  name="password"
-                  id="form-group--password"
-                  type="password"
-                  className="login__input-field"
-                  required
-                />
-              </div>
-            </div>
-
-            <button className="login__submit-button">
-              <span>Log in</span>
-            </button>
-          </form>
+          <LoginForm />
 
           <div className="login__auth-footer">
             <div className="login__forgot-password-container">
