@@ -54,7 +54,7 @@
   margin-bottom: 16px;
   width: 100%;
 }
-.login .ud-btn {
+.login__auth-social-button {
   margin: 0;
   background-image: none;
   font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
@@ -78,7 +78,7 @@
   width: 100%;
   justify-content: left;
 }
-.login .google-auth-icon {
+.login__social--icon {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
@@ -157,7 +157,7 @@
   transition: opacity 100ms linear;
   flex: 1;
 }
-.login .ud-form-label {
+.login__form-label {
   color: #1c1d1f;
   padding: 0;
   font-weight: 700;
@@ -179,13 +179,18 @@
   transform-origin: top left;
   right: 0;
 }
+.login__form-label.active {
+  transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transform: translateY(0);
+  transform-origin: top left;
+  opacity: 1;
+}
 .login .ud-compact-form-label-content {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
   font-size: 14px;
   pointer-events: none;
-  box-sizing: border-box;
   margin: 0;
   flex: 1;
   min-width: 1px;
@@ -305,4 +310,4 @@
   line-height: 1.4;
   font-size: 14px;
   margin-top: 4px;
-}/*# sourceMappingURL=LoginForm.css.map */
+}/*# sourceMappingURL=Login.css.map */

@@ -1,0 +1,30 @@
+.ud-button {
+  display: flex;
+  align-items: center;
+}
+.ud-button-small {
+  padding: 0.5rem 0.8rem;
+}
+.ud-button-medium {
+  padding: 0.5rem 1.2rem;
+}
+.ud-button-large {
+  display: flex;
+}
+.ud-button-primary {
+  color: #1c1d1f;
+  border: none;
+  border: 1px solid #1c1d1f;
+}
+.ud-button-large-title {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  margin-left: 4px;
+}/*# sourceMappingURL=Button.css.map */

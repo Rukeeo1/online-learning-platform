@@ -1,11 +1,23 @@
 import * as React from "react";
-import { Svgs } from "../../assets/svgs";
 import "./Login.css";
+import { LoginSocialButton } from "./LoginSocialButton";
 
 interface LoginFormProps {}
 
 export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
   const {} = props;
+
+  const [isInputFocused, setIsInputFocused] = React.useState(false);
+
+  const handleInputBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.value) {
+      setIsInputFocused(false);
+    }
+  };
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
 
   return (
     <div className="login">
@@ -13,51 +25,29 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
         <div className="login__auth-container">
           <h2 className="login__auth-title">Log in to your Udemy account</h2>
 
-          <button
-            type="button"
-            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
-            data-purpose="google-login"
-          >
-            <Svgs.GoogleIcon className="google-auth-icon" />
-            <span className="btn-title">Continue with Google</span>
-          </button>
-
-          <button
-            type="button"
-            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
-            data-purpose="google-login"
-          >
-            <Svgs.FacebookIcon className="google-auth-icon" />
-            <span className="btn-title">Continue with Facebook</span>
-          </button>
-
-          <button
-            type="button"
-            className="ud-btn ud-btn-large ud-btn-secondary ud-heading-md auth-social--social-btn--google"
-            data-purpose="google-login"
-          >
-            <Svgs.AppleIcon className="google-auth-icon" />
-            <span className="btn-title">Continue with Apple</span>
-          </button>
+          <LoginSocialButton />
 
           <form className="login__form-container">
             <div className="login__email-container">
               <div className="login__form-content">
                 <label
                   htmlFor="form-group--email"
-                  className="ud-form-label ud-heading-sm"
+                  className={`login__form-label ${
+                    isInputFocused ? "active" : ""
+                  }`}
                 >
                   <span className="ud-compact-form-label-content">
                     <span className="ud-compact-form-label-text">Email</span>
                   </span>
                 </label>
-
                 <input
                   name="email"
                   id="form-group--email"
                   type="email"
                   className="login__input-field"
                   required
+                  onBlur={handleInputBlur}
+                  onFocus={handleInputFocus}
                 />
               </div>
             </div>
