@@ -13,6 +13,20 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
     React.useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
 
+  const [loginInfo, setLoginInfo] = React.useState({
+    email: "",
+    password: "",
+  });
+
+  const { email, password } = loginInfo;
+
+  const [errors, setErrors] = React.useState({
+    emailError: "",
+    emailTouched: false,
+    passwordError: "",
+    passwordTouched: false,
+  });
+
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsPasswordTyped(e.target.value.length > 0);
   };
@@ -35,6 +49,39 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
+  };
+
+  const validateForm = () => {
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginInfo.email)) {
+      setErrors((prevState) => ({
+        ...prevState,
+        emailError: "",
+      }));
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        emailError:
+          "Please include an '@' in the email address. letter is missing an '@'",
+      }));
+    }
+
+    const MIN_PASSWORD_LENGTH = 6;
+
+    if (
+      loginInfo.password.match(
+        new RegExp(`^[a-zA-Z0-9]{${MIN_PASSWORD_LENGTH},100}$`)
+      )
+    ) {
+      setErrors((prevState) => ({
+        ...prevState,
+        passwordError: "",
+      }));
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        passwordError: `Please lengthen this text to ${MIN_PASSWORD_LENGTH} characters or more (you are currently using ${loginInfo.password.length} characters)`,
+      }));
+    }
   };
 
   return (
@@ -78,7 +125,7 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
 
           <input
             name="password"
-            id="form-group--email"
+            id="form-group--password"
             type={showPassword ? "text" : "password"}
             className="login__input-field"
             required
