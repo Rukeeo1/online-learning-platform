@@ -281,7 +281,7 @@
   line-height: 1.4;
   font-size: 16px;
 }
-.login .ud-link-underline {
+.login__forgot-link-underline {
   text-align: center;
   line-height: 1.4;
   font-size: 16px;
@@ -302,6 +302,17 @@
   border-top: 1px solid #d1d7dc;
   margin: 16px 0;
   width: 100%;
+}
+.login__account-link-underline {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .login__signup-for-account {
   color: #1c1d1f;

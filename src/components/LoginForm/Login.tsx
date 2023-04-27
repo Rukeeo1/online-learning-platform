@@ -23,7 +23,7 @@ export const Login: React.FunctionComponent<LoginProps> = (props) => {
               <span>
                 or{" "}
                 <a
-                  className="ud-text-bold ud-link-underline"
+                  className="ud-text-bold login__forgot-link-underline"
                   href="/user/forgot-password/"
                 >
                   Forgot Password
@@ -37,9 +37,8 @@ export const Login: React.FunctionComponent<LoginProps> = (props) => {
               <span>
                 Don't have an account?{" "}
                 <a
-                  className="ud-text-bold ud-link-underline"
-                  href="/join/signup-popup/?locale=en_US&amp;next=https%3A%2F%2Fwww.udemy.com%2F&amp;response_type=html"
-                  style={{ fontSize: "14px" }}
+                  className="ud-text-bold login__account-link-underline"
+                  href="/join/signup-popup/"
                 >
                   Sign up
                 </a>
@@ -48,10 +47,9 @@ export const Login: React.FunctionComponent<LoginProps> = (props) => {
 
             <div className="login__organization">
               <a
-                className="ud-text-bold ud-link-underline"
+                className="ud-text-bold login__account-link-underline"
                 href="/organization/global-login/"
                 data-disable-loader="true"
-                style={{ fontSize: "14px" }}
               >
                 Log in with your organization
               </a>
