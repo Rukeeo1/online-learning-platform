@@ -5,7 +5,6 @@ import { ButtonWithIcon } from "../../common/Button/Button";
 
 interface LoginSocialButtonProps {}
 
-
 export const LoginSocialButton: React.FunctionComponent<
   LoginSocialButtonProps
 > = (props) => {
