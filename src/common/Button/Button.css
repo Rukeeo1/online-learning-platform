@@ -16,7 +16,21 @@
   border: none;
   border: 1px solid #1c1d1f;
 }
-.ud-button-large-title {
+.ud-button-secondary {
+  color: #1c1d1f;
+  border: none;
+  border: 1px solid #1c1d1f;
+}
+.ud-button-tertiary {
+  margin: 0;
+  font-size: 16px;
+  min-width: 80px;
+  height: 48px;
+  color: #fff;
+  background-color: #a435f0;
+  width: 100%;
+}
+.ud-button-icon-large-title {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;

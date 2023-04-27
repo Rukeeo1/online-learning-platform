@@ -36,8 +36,8 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
               isEmailLabelFocused ? "active" : ""
             }`}
           >
-            <span className="ud-compact-form-label-content">
-              <span className="ud-compact-form-label-text">Email</span>
+            <span className="login__compact-form-label-content">
+              <span className="login__compact-form-label-text">Email</span>
             </span>
           </label>
           <input
@@ -60,8 +60,8 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
               isPasswordLabelFocused ? "active" : ""
             }`}
           >
-            <span className="ud-compact-form-label-content">
-              <span className="ud-compact-form-label-text">Password</span>
+            <span className="login__compact-form-label-content">
+              <span className="login__compact-form-label-text">Password</span>
             </span>
           </label>
           <input

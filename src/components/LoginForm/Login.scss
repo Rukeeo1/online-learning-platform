@@ -217,7 +217,7 @@
     opacity: 1;
   }
 
-  .ud-compact-form-label-content {
+  &__compact-form-label-content {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02rem;
@@ -231,7 +231,7 @@
     align-items: center;
   }
 
-  .ud-compact-form-label-text {
+  &__compact-form-label-text {
     color: #1c1d1f;
     font-weight: 700;
     line-height: 1.2;

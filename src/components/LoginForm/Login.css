@@ -196,7 +196,7 @@
   transform-origin: top left;
   opacity: 1;
 }
-.login .ud-compact-form-label-content {
+.login__compact-form-label-content {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
@@ -209,7 +209,7 @@
   display: flex;
   align-items: center;
 }
-.login .ud-compact-form-label-text {
+.login__compact-form-label-text {
   color: #1c1d1f;
   font-weight: 700;
   line-height: 1.2;

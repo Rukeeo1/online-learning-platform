@@ -20,7 +20,23 @@
     border: 1px solid #1c1d1f;
   }
 
-  &-large-title {
+  &-secondary {
+    color: #1c1d1f;
+    border: none;
+    border: 1px solid #1c1d1f;
+  }
+
+  &-tertiary {
+    margin: 0;
+    font-size: 16px;
+    min-width: 80px;
+    height: 48px;
+    color: #fff;
+    background-color: #a435f0;
+    width: 100%;
+  }
+
+  &-icon-large-title {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02rem;
