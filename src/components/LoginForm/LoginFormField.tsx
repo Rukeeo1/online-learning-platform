@@ -18,8 +18,6 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
     password: "",
   });
 
-  const { email, password } = loginInfo;
-
   const [errors, setErrors] = React.useState({
     emailError: "",
     emailTouched: false,
@@ -27,8 +25,52 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
     passwordTouched: false,
   });
 
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsPasswordTyped(e.target.value.length > 0);
+  const validateEmail = (email: string): boolean => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const MIN_PASSWORD_LENGTH = 6;
+
+  const validatePassword = (password: string): boolean => {
+    const re = new RegExp(`^[a-zA-Z0-9]{${MIN_PASSWORD_LENGTH},100}$`);
+    return re.test(password);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    console.log(name, value, "willochs input value");
+
+    setLoginInfo({
+      ...loginInfo,
+      [name]: value,
+    });
+
+    if (name === "email") {
+      setErrors({
+        ...errors,
+        emailError: !validateEmail(value)
+          ? "Please enter a valid email address"
+          : "",
+        emailTouched: true,
+      });
+    } else if (name === "password") {
+      const passwordLength = value.length;
+      const passwordError =
+        passwordLength === 1 || !validatePassword(value)
+          ? `Please lengthen this text to ${MIN_PASSWORD_LENGTH} characters or more (you are currently using ${passwordLength} ${
+              passwordLength === 1 ? "character" : "characters"
+            })`
+          : "";
+
+      setErrors({
+        ...errors,
+        passwordError,
+        passwordTouched: true,
+      });
+
+      setIsPasswordTyped(e.target.value.length > 0);
+    }
   };
 
   const handleInputBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,41 +93,21 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
     setShowPassword(!showPassword);
   };
 
-  const validateForm = () => {
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginInfo.email)) {
-      setErrors((prevState) => ({
-        ...prevState,
-        emailError: "",
-      }));
-    } else {
-      setErrors((prevState) => ({
-        ...prevState,
-        emailError:
-          "Please include an '@' in the email address. letter is missing an '@'",
-      }));
-    }
-
-    const MIN_PASSWORD_LENGTH = 6;
-
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (
-      loginInfo.password.match(
-        new RegExp(`^[a-zA-Z0-9]{${MIN_PASSWORD_LENGTH},100}$`)
-      )
+      validateEmail(loginInfo.email) &&
+      validatePassword(loginInfo.password)
     ) {
-      setErrors((prevState) => ({
-        ...prevState,
-        passwordError: "",
-      }));
+      console.log("Valid form submitted: ", loginInfo);
+      // Do something with the valid form data here
     } else {
-      setErrors((prevState) => ({
-        ...prevState,
-        passwordError: `Please lengthen this text to ${MIN_PASSWORD_LENGTH} characters or more (you are currently using ${loginInfo.password.length} characters)`,
-      }));
+      console.log("Invalid form submitted: ", errors);
     }
   };
 
   return (
-    <form className="login__form-container">
+    <form className="login__form-container" onSubmit={handleSubmit}>
       <div className="login__email-container">
         <div className="login__form-content">
           <label
@@ -103,11 +125,17 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
             id="form-group--email"
             type="email"
             className="login__input-field"
-            required
+            value={loginInfo.email}
+            onChange={handleInputChange}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
+            required
           />
         </div>
+
+        {errors.emailError && errors.emailTouched && (
+          <div className="login__error-message">{errors.emailError}</div>
+        )}
       </div>
 
       <div className="login__password-container">
@@ -128,10 +156,11 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
             id="form-group--password"
             type={showPassword ? "text" : "password"}
             className="login__input-field"
-            required
-            onChange={handlePasswordChange}
+            value={loginInfo.password}
+            onChange={handleInputChange}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
+            required
           />
 
           {isPasswordTyped && (
@@ -153,6 +182,10 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = (props) => {
             </button>
           )}
         </div>
+
+        {errors.passwordError && errors.passwordTouched && (
+          <div className="login__error-message">{errors.passwordError}</div>
+        )}
       </div>
 
       <button className="login__submit-button">

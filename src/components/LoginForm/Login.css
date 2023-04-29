@@ -294,6 +294,13 @@
   height: 20px;
   color: #1c1d1f;
 }
+.login__error-message {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-align: start;
+  color: red;
+}
 .login__submit-button {
   margin: 0;
   background-image: none;
