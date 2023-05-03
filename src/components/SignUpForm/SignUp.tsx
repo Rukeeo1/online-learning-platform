@@ -116,6 +116,15 @@ export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
                   required
                 />
               </div>
+
+              <div className="signup__password-strength-indicator-container">
+                <div className="signup__password-strength-indicator-content">
+                  <div className="signup__password--strength-box"></div>
+                  <div className="signup__password--strength-box"></div>
+                  <div className="signup__password--strength-box"></div>
+                  <div className="signup__password--strength-box"></div>
+                </div>
+              </div>
             </div>
           </form>
         </div>

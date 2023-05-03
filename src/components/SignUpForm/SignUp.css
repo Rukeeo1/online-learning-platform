@@ -198,4 +198,40 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.signup__password-strength-indicator-container {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #6a6f73;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  width: 100%;
+}
+.signup__password-strength-indicator-content {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #6a6f73;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 16px;
+}
+.signup__password--strength-box {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #6a6f73;
+  margin: 0;
+  padding: 0;
+  background: #d1d7dc;
+  border-radius: 9999px;
+  height: 4px;
+  width: 42px;
 }/*# sourceMappingURL=SignUp.css.map */
