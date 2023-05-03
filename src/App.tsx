@@ -5,7 +5,7 @@ import { Header } from "./components/Header/header";
 import { HomePage } from "./components/HomePage/homePage";
 
 import { LoginForm } from "./components/LoginForm/loginForm";
-import { SignUpForm } from "./components/SignUpForm/signUpForm";
+import { SignUpForm } from "./components/SignUpForm/SignUp";
 
 // import './App.css'
 
