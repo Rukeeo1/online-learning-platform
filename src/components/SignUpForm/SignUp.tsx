@@ -126,6 +126,22 @@ export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
                 </div>
               </div>
             </div>
+
+            <div className="signup__form-checkbox-notification-container">
+              <label
+                className="signup__toggle-checkbox-input-container"
+                htmlFor="checkbox"
+              >
+                <input
+                  name="subscribeToEmails"
+                  className="signup__toggle-checkbox-input"
+                  id="checkbox"
+                  type="checkbox"
+                />
+                Send me special offers, personalized recommendations, and
+                learning tips.
+              </label>
+            </div>
           </form>
         </div>
       </div>
