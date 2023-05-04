@@ -1,29 +1,13 @@
-import { useState } from "react";
-import Button from "@mui/material/Button";
-import Login from "./components/Login";
 import { Header } from "./components/Header/header";
-import { HomePage } from "./components/HomePage/homePage";
+import { SignUp } from "./components/SignUpForm/SignUp";
 
-import { LoginForm } from "./components/LoginForm/loginForm";
-import { SignUpForm } from "./components/SignUpForm/SignUp";
-
-// import './App.css'
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
-
-      {/* <HomePage
-        images={images}
-        currentBillboard={currentBillboard}
-        setCurrentBillboard={setCurrentBillboard}
-      /> */}
-
-      {/* <LoginForm /> */}
-      <SignUpForm />
+      <SignUp />
     </div>
   );
-}
+};
 
 export default App;
