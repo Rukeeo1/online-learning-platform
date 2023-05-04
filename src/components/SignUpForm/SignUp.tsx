@@ -175,7 +175,14 @@ export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
 
             <div className="signup__auth-line-separator"></div>
 
-            <div className="signup__login-to-account"><span>Already have an account? <a className="signup__login-to-account-underline" href="/">Log in</a></span></div>
+            <div className="signup__login-to-account">
+              <span>
+                Already have an account?{" "}
+                <a className="signup__login-to-account-underline" href="/">
+                  Log in
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
