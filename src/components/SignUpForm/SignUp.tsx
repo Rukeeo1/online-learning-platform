@@ -142,7 +142,41 @@ export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
                 learning tips.
               </label>
             </div>
+
+            <button className="signup__submit-button">
+              <span>Sign up</span>
+            </button>
           </form>
+
+          <div className="signup__auth-footer">
+            <div className="signup__terms-of-use-container">
+              <span className="signup__terms-of-use-text">
+                By signing up, you agree to our{" "}
+                <a
+                  target="_blank"
+                  className="signup__terms-of-use-underline"
+                  href="/terms/"
+                  rel="noopener noreferrer"
+                >
+                  Terms of Use
+                </a>{" "}
+                and{" "}
+                <a
+                  target="_blank"
+                  className="signup__terms-of-use-underline"
+                  href="/terms/privacy/"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </span>
+            </div>
+
+            <div className="signup__auth-line-separator"></div>
+
+            <div className="signup__login-to-account"><span>Already have an account? <a className="signup__login-to-account-underline" href="/">Log in</a></span></div>
+          </div>
         </div>
       </div>
     </div>
