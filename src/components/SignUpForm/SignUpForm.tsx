@@ -12,7 +12,6 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
   const [isPasswordLabelFocused, setIsPasswordLabelFocused] =
     React.useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
-
   const [password, setPassword] = React.useState("");
 
   const [passwordStrengthLevel, setPasswordStrengthLevel] = React.useState(0);
@@ -26,19 +25,15 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
 
   React.useEffect(() => {
     if (
-      (password.length <= 5 && !/[^0-9]/.test(password)) ||
-      (password.length <= 5 && !/[^a-zA-Z]/.test(password))
+      (password.length <= 6 && !/[^0-9]/.test(password)) ||
+      (password.length <= 6 && !/[^a-zA-Z]/.test(password))
     ) {
       setPasswordStrengthLevel(-1);
-    } else if (
-      password.length < 8 ||
-      !/\d/.test(password) ||
-      !/[a-zA-Z]/.test(password)
-    ) {
+    } else if (password.length >= 7 && password.length <= 9) {
       setPasswordStrengthLevel(0);
-    } else if (password.length < 12) {
+    } else if (password.length === 10) {
       setPasswordStrengthLevel(1);
-    } else if (password.length < 16) {
+    } else if (password.length === 11) {
       setPasswordStrengthLevel(2);
     } else {
       setPasswordStrengthLevel(3);
@@ -51,7 +46,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
       className="signup__password--strength-box"
       style={{
         backgroundColor:
-          index === 0 && password.length === 0
+          index === 0 && password.length <= 5
             ? "#d1d7dc"
             : index <= passwordStrengthLevel
             ? level.color
@@ -136,7 +131,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
       <div className="signup__fullname-container">
         <div className="signup__form-content">
           <label
-            htmlFor="form-group--email"
+            htmlFor="form-group--fullname"
             className={`signup__form-label ${
               isFullnameFocused ? "active" : ""
             }`}
@@ -147,7 +142,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
           </label>
           <input
             name="fullname"
-            id="form-group--email"
+            id="form-group--fullname"
             type="name"
             className="signup__input-field"
             onBlur={handleInputBlur}
@@ -184,7 +179,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
       <div className="signup__password-container">
         <div className="signup__form-content">
           <label
-            htmlFor="form-group--email"
+            htmlFor="form-group--password"
             className={`signup__form-label ${
               isPasswordLabelFocused ? "active" : ""
             }`}
@@ -195,7 +190,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
           </label>
           <input
             name="password"
-            id="form-group--email"
+            id="form-group--password"
             type="password"
             className="signup__input-field"
             onBlur={handleInputBlur}
