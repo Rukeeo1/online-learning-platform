@@ -199,7 +199,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.signup__password-strength-indicator-container {
+.signup__password-strength-container {
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -211,7 +211,21 @@
   padding-top: 8px;
   width: 100%;
 }
-.signup__password-strength-indicator-content {
+.signup__password-strength-content {
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #6a6f73;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.signup__password-strength-indicators {
   font-weight: 400;
   line-height: 1.4;
   font-size: 12px;
@@ -236,13 +250,13 @@
   width: 42px;
 }
 .signup__form-checkbox-notification-container {
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 16px;
-  color: #1c1d1f;
   margin: 0;
   padding: 0;
-  margin-top: 8px;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #6a6f73;
 }
 .signup__toggle-checkbox-input-container {
   margin: 0;

@@ -24,16 +24,20 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
   ];
 
   React.useEffect(() => {
+    const hasMixedCharacters = /^(?=.*[a-zA-Z])(?=.*[0-9])/.test(password);
+    const hasRepeatedCharacter = /(.)\1+/.test(password);
+
     if (
-      (password.length <= 6 && !/[^0-9]/.test(password)) ||
-      (password.length <= 6 && !/[^a-zA-Z]/.test(password))
+      password.length <= 6 ||
+      (!hasMixedCharacters && !hasRepeatedCharacter) ||
+      (hasRepeatedCharacter && !hasMixedCharacters)
     ) {
       setPasswordStrengthLevel(-1);
-    } else if (password.length >= 7 && password.length <= 9) {
+    } else if (password.length <= 9) {
       setPasswordStrengthLevel(0);
-    } else if (password.length === 10) {
+    } else if (password.length <= 10) {
       setPasswordStrengthLevel(1);
-    } else if (password.length === 11) {
+    } else if (password.length <= 11) {
       setPasswordStrengthLevel(2);
     } else {
       setPasswordStrengthLevel(3);
@@ -46,7 +50,7 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
       className="signup__password--strength-box"
       style={{
         backgroundColor:
-          index === 0 && password.length <= 5
+          index === 0 && password.length <= 6
             ? "#d1d7dc"
             : index <= passwordStrengthLevel
             ? level.color
@@ -201,15 +205,18 @@ export const SignUpForm: React.FunctionComponent<SignUpProps> = (props) => {
           />
         </div>
 
-        <div className="signup__password-strength-indicator-container">
-          <div className="signup__password-strength-indicator-content">
-            {passwordStrengthBoxes}
+        <div className="signup__password-strength-container">
+          <div className="signup__password-strength-content">
+            <div className="signup__password-strength-indicators">
+              {passwordStrengthBoxes}
+            </div>
+
+            <div className="signup__form-checkbox-notification-container">
+              {password &&
+                passwordStrengthLevels &&
+                passwordStrengthLevels[passwordStrengthLevel]?.label}
+            </div>
           </div>
-        </div>
-        <div className="signup__form-checkbox-notification-container">
-          {password &&
-            passwordStrengthLevels &&
-            passwordStrengthLevels[passwordStrengthLevel]?.label}
         </div>
       </div>
 
